@@ -348,7 +348,7 @@ Wyślij nam wiadomość na adres **rezerwacja@sunandsnow.pl** z następującymi 
 **Adres GPS:**
 Na Skarpie 10/15, 57-512 Biała Woda
 
-[Otwórz w Google Maps](https://goo.gl/maps/) *(link do uzupełnienia)*
+[Otwórz w Google Maps](https://maps.app.goo.gl/HMwJWPDvitMMTkCE8)
 
 ### Dojazd samochodem
 
