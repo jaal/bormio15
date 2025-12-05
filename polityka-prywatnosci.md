@@ -5,15 +5,15 @@ layout: page
 
 # Polityka Prywatności
 
-**Ostatnia aktualizacja: [DATA]**
+**Ostatnia aktualizacja: 5 grudnia 2025**
 
 ## 1. Administrator Danych
 
 Administratorem danych osobowych jest:
-- **Nazwa:** [NAZWA WŁAŚCICIELA/FIRMY]
-- **Adres:** [PEŁNY ADRES]
-- **E-mail:** [EMAIL KONTAKTOWY]
-- **Telefon:** [NUMER TELEFONU]
+- **Nazwa:** Technologie 21 Aleksander Jaworski
+- **Adres:** Pionerska 7/2, 53-213 Wrocław, Polska
+- **NIP:** 6912215667
+- **E-mail:** info@bormio15.com
 
 ## 2. Podstawa Prawna
 
@@ -79,7 +79,7 @@ PostHog przetwarza dane w centrum danych w Unii Europejskiej (eu.i.posthog.com).
 ## 9. Okres Przechowywania Danych
 
 - **Dane kontaktowe i rezerwacyjne:** przez okres niezbędny do realizacji usługi oraz przez okres wymagany przepisami prawa (np. przepisy podatkowe - 5 lat)
-- **Dane analityczne:** [OKRES, NP. 24 MIESIĄCE]
+- **Dane analityczne:** 24 miesiące
 - **Zgody marketingowe:** do czasu wycofania zgody
 
 ## 10. Twoje Prawa
@@ -94,7 +94,7 @@ Masz prawo do:
 - **Cofnięcia zgody** - w dowolnym momencie (bez wpływu na zgodność z prawem przetwarzania dokonanego przed cofnięciem)
 - **Wniesienia skargi** - do Prezesa Urzędu Ochrony Danych Osobowych
 
-Aby skorzystać z praw, skontaktuj się: [EMAIL KONTAKTOWY]
+Aby skorzystać z praw, skontaktuj się: info@bormio15.com
 
 ## 11. Bezpieczeństwo Danych
 
@@ -111,5 +111,5 @@ Zastrzegamy sobie prawo do aktualizacji niniejszej polityki. O istotnych zmianac
 ## 13. Kontakt
 
 W sprawach dotyczących ochrony danych osobowych:
-- **E-mail:** [EMAIL KONTAKTOWY]
-- **Adres:** [ADRES KORESPONDENCYJNY]
+- **E-mail:** info@bormio15.com
+- **Adres:** Pionerska 7/2, 53-213 Wrocław, Polska

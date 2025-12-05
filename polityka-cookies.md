@@ -5,7 +5,7 @@ layout: page
 
 # Polityka Cookies
 
-**Ostatnia aktualizacja: [DATA]**
+**Ostatnia aktualizacja: 5 grudnia 2025**
 
 ## Czym są pliki cookies?
 
@@ -27,7 +27,7 @@ Pliki cookies (ciasteczka) to małe pliki tekstowe, które są zapisywane na Two
 
 | Nazwa | Dostawca | Czas trwania | Opis |
 |-------|----------|--------------|------|
-| ph_* | PostHog (eu.i.posthog.com) | [OKRES] | Analiza ruchu i zachowań użytkowników |
+| ph_* | PostHog (eu.i.posthog.com) | 365 dni | Analiza ruchu i zachowań użytkowników |
 | posthog_session | PostHog | Sesja | Identyfikacja sesji użytkownika |
 
 **PostHog** - narzędzie analityczne open-source hostowane w UE. Więcej: [https://posthog.com/privacy](https://posthog.com/privacy)
@@ -61,7 +61,7 @@ Możesz w każdej chwili zmienić swoją zgodę na cookies:
 ## Więcej informacji
 
 - [Polityka Prywatności](/polityka-prywatnosci)
-- Kontakt: [EMAIL]
+- Kontakt: info@bormio15.com
 
 ## Podstawa prawna
 
