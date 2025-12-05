@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Cookie Consent - Bormio15</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+            display: inline-block;
+        }
+        .btn-danger {
+            background: #f44336;
+        }
+        .btn-primary {
+            background: #2196F3;
+        }
+        .status {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 4px;
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        .code {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🍪 Cookie Consent Debug</h1>
+
+        <div id="status" class="status">
+            Sprawdzanie stanu cookies...
+        </div>
+
+        <h2>Opcje:</h2>
+
+        <button class="btn btn-danger" onclick="resetConsent()">
+            Usuń zgodę (Pokaż banner)
+        </button>
+
+        <button class="btn btn-primary" onclick="checkStatus()">
+            Sprawdź status
+        </button>
+
+        <button class="btn" onclick="goToSite()">
+            Przejdź do strony głównej
+        </button>
+
+        <h3>Instrukcja:</h3>
+        <ol>
+            <li>Kliknij "Usuń zgodę" aby wyczyścić zapisaną zgodę</li>
+            <li>Kliknij "Przejdź do strony głównej"</li>
+            <li>Banner cookies powinien się pojawić na dole strony</li>
+        </ol>
+
+        <h3>Alternatywnie - przez konsolę przeglądarki:</h3>
+        <div class="code">
+            localStorage.removeItem('cookieConsent');<br>
+            location.href = 'https://bormio15.com';
+        </div>
+    </div>
+
+    <script>
+        function resetConsent() {
+            localStorage.removeItem('cookieConsent');
+            updateStatus('✅ Zgoda została usunięta! Kliknij "Przejdź do strony głównej" aby zobaczyć banner.');
+        }
+
+        function checkStatus() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (consent) {
+                const data = JSON.parse(consent);
+                updateStatus('❌ Zgoda zapisana: ' + JSON.stringify(data, null, 2));
+            } else {
+                updateStatus('✅ Brak zapisanej zgody - banner powinien się pokazać');
+            }
+        }
+
+        function goToSite() {
+            window.location.href = 'https://bormio15.com';
+        }
+
+        function updateStatus(message) {
+            document.getElementById('status').innerHTML = message.replace(/\n/g, '<br>');
+        }
+
+        // Auto-check on load
+        window.addEventListener('DOMContentLoaded', checkStatus);
+    </script>
+</body>
+</html>
