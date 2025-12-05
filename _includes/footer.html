@@ -39,7 +39,7 @@
         {% if site.copyright %}
           {{ site.copyright | markdownify }}
         {% else %}
-          <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Technologie 21 Aleksander Jaworski, NIP: 6912215667</p>
+          <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}.<br>Technologie 21 Aleksander Jaworski, NIP: 6912215667</p>
         {% endif %}
       </div>
     </div>
@@ -47,44 +47,77 @@
 </footer>
 
 <style>
+/* Ensure footer appears below content and isn't hidden */
+.site-footer {
+  position: relative;
+  z-index: 1;
+  margin-top: 3rem;
+  padding: 2rem 0 1rem 0;
+  border-top: 1px solid #e8e8e8;
+  background: #f9f9f9;
+  clear: both;
+}
+
+.site-footer .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
-  padding: 2rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .footer-section h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
   margin-bottom: 1rem;
-  color: inherit;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .footer-section p {
   margin-bottom: 0.75rem;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.footer-section strong {
+  color: #333;
+  font-weight: 600;
 }
 
 .footer-section a {
-  color: inherit;
+  color: #0066cc;
   text-decoration: none;
-  transition: opacity 0.2s;
+  transition: color 0.2s ease;
 }
 
 .footer-section a:hover {
-  opacity: 0.7;
+  color: #0052a3;
   text-decoration: underline;
 }
 
 .footer-bottom {
   text-align: center;
+  padding: 1rem 0;
 }
 
 .footer-bottom .copyright {
-  font-size: 0.9rem;
-  opacity: 0.8;
+  font-size: 0.85rem;
+  color: #888;
+  line-height: 1.6;
+}
+
+.footer-bottom .copyright p {
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -95,6 +128,10 @@
 
   .footer-section {
     text-align: center;
+  }
+
+  .site-footer {
+    margin-top: 2rem;
   }
 }
 </style>
