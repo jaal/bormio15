@@ -1,0 +1,217 @@
+<style>
+#cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    color: #fff;
+    padding: 20px;
+    z-index: 9999;
+    display: none;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#cookie-consent.show {
+    display: block;
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cookie-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cookie-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.cookie-btn:hover {
+    opacity: 0.8;
+}
+
+.cookie-btn-accept {
+    background: #4CAF50;
+    color: white;
+}
+
+.cookie-btn-settings {
+    background: #2196F3;
+    color: white;
+}
+
+.cookie-btn-reject {
+    background: #f44336;
+    color: white;
+}
+
+.cookie-settings {
+    margin-top: 15px;
+    display: none;
+}
+
+.cookie-settings.show {
+    display: block;
+}
+
+.cookie-option {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.cookie-option label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cookie-option input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+.cookie-option-required {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    #cookie-consent {
+        font-size: 13px;
+    }
+
+    .cookie-buttons {
+        flex-direction: column;
+    }
+
+    .cookie-btn {
+        width: 100%;
+    }
+}
+</style>
+
+<div id="cookie-consent">
+    <div class="cookie-content">
+        <h3>🍪 Ta strona używa plików cookies</h3>
+        <p>
+            Używamy plików cookies, aby zapewnić prawidłowe działanie strony oraz analizować ruch w celu jego ulepszenia.
+            Klikając "Akceptuj wszystkie" wyrażasz zgodę na wykorzystanie wszystkich plików cookies.
+            <a href="/polityka-prywatnosci" style="color: #4CAF50; text-decoration: underline;">Polityka Prywatności</a> |
+            <a href="/polityka-cookies" style="color: #4CAF50; text-decoration: underline;">Polityka Cookies</a>
+        </p>
+
+        <div class="cookie-buttons">
+            <button class="cookie-btn cookie-btn-accept" onclick="acceptAllCookies()">Akceptuj wszystkie</button>
+            <button class="cookie-btn cookie-btn-settings" onclick="toggleCookieSettings()">Ustawienia</button>
+            <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Odrzuć opcjonalne</button>
+        </div>
+
+        <div id="cookie-settings" class="cookie-settings">
+            <h4>Ustawienia cookies</h4>
+
+            <div class="cookie-option cookie-option-required">
+                <label>
+                    <input type="checkbox" checked disabled>
+                    <div>
+                        <strong>Niezbędne</strong>
+                        <p style="margin: 5px 0 0 0; font-size: 12px;">Wymagane do prawidłowego działania strony. Nie mogą być wyłączone.</p>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cookie-option">
+                <label>
+                    <input type="checkbox" id="analytics-cookies" checked>
+                    <div>
+                        <strong>Analityczne</strong>
+                        <p style="margin: 5px 0 0 0; font-size: 12px;">Pomagają zrozumieć, jak odwiedzający korzystają ze strony (PostHog).</p>
+                    </div>
+                </label>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <button class="cookie-btn cookie-btn-accept" onclick="savePreferences()">Zapisz ustawienia</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Check if consent has been given
+function checkConsent() {
+    const consent = localStorage.getItem('cookieConsent');
+    if (!consent) {
+        document.getElementById('cookie-consent').classList.add('show');
+    } else {
+        loadAnalytics(JSON.parse(consent));
+    }
+}
+
+function acceptAllCookies() {
+    const consent = {
+        necessary: true,
+        analytics: true,
+        timestamp: new Date().toISOString()
+    };
+    localStorage.setItem('cookieConsent', JSON.stringify(consent));
+    document.getElementById('cookie-consent').classList.remove('show');
+    loadAnalytics(consent);
+}
+
+function rejectCookies() {
+    const consent = {
+        necessary: true,
+        analytics: false,
+        timestamp: new Date().toISOString()
+    };
+    localStorage.setItem('cookieConsent', JSON.stringify(consent));
+    document.getElementById('cookie-consent').classList.remove('show');
+}
+
+function toggleCookieSettings() {
+    const settings = document.getElementById('cookie-settings');
+    settings.classList.toggle('show');
+}
+
+function savePreferences() {
+    const analytics = document.getElementById('analytics-cookies').checked;
+    const consent = {
+        necessary: true,
+        analytics: analytics,
+        timestamp: new Date().toISOString()
+    };
+    localStorage.setItem('cookieConsent', JSON.stringify(consent));
+    document.getElementById('cookie-consent').classList.remove('show');
+    loadAnalytics(consent);
+}
+
+function loadAnalytics(consent) {
+    if (consent.analytics && !window.posthog) {
+        // Load PostHog script
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Dr Ur fi Lr zr ci Or jr capture Ai calculateEventProperties qr register register_once register_for_session unregister unregister_for_session Jr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Gr Br createPersonProfile Vr Cr Kr opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Hr debug O Wr getPageViewId captureTraceFeedback captureTraceMetric Rr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_vOqFYtcoxOZ7PgvMWYNZQeMvklWCfFiY58OqRfCc1xs', {
+            api_host: 'https://eu.i.posthog.com',
+            defaults: '2025-11-30',
+            person_profiles: 'identified_only'
+        });
+    }
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', checkConsent);
+</script>
