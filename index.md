@@ -639,6 +639,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const baseUrl = 'https://www.sunandsnow.pl/search/apartment/7620/803';
     const finalUrl = `${baseUrl}/${startDate}/${endDate}/${peopleString}?`;
 
+    // Track booking form submission with PostHog
+    const kidsAges = [];
+    if (numKids > 0) {
+      for (let i = 0; i < numKids; i++) {
+        const ageInput = document.getElementById(`kid-age-${i}`);
+        if (ageInput && ageInput.value) {
+          kidsAges.push(parseInt(ageInput.value));
+        }
+      }
+    }
+
+    if (window.posthog) {
+      posthog.capture('booking_form_submitted', {
+        page: 'home',
+        start_date: startDate,
+        end_date: endDate,
+        adults: adults,
+        kids_count: numKids,
+        kids_ages: kidsAges,
+        booking_url: finalUrl
+      });
+    }
+
     // Redirect to booking system
     window.location.href = finalUrl;
   });
