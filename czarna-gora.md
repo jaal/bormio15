@@ -426,26 +426,26 @@ Czarna Góra Resort to jeden z najnowocześniejszych ośrodków narciarskich w P
 - **Czarne trasy:** Dla ekspertów
 
 ### Odległości od apartamentu
-- 150m do wyciągu narciarskiego
+- 200m do wyciągu narciarskiego
 - 200m do punktu wypożyczalni sprzętu
-- 100m do restauracji przy stoku
+- 100m do pizzerii i kawiarni przy stoku
 
 ## Relaks i regeneracja
 
 ### Strefa wellness
 W pobliżu apartamentu znajdziesz:
-- **Basen kryty** (200m)
-- **Sauna fińska** (200m)
-- **Masaże i SPA** (300m)
+- **Basen kryty** (100m)
+- **Sauna fińska** (100m)
+- **Masaże i SPA** (100m)
 
 Idealne miejsce na relaks po aktywnym dniu w górach!
 
 ## Gastronomia
 
 ### Restauracje w okolicy
-- **100m:** Restauracja górska z polską kuchnią
-- **150m:** Pizzeria
-- **200m:** Kawiarnia z widokiem na góry
+- **300m:** Restauracja górska z polską kuchnią
+- **100m:** Pizzeria
+- **100m:** Kawiarnia z widokiem na góry
 - **100m:** Sklep spożywczy
 
 ## Letnie atrakcje

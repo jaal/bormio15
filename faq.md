@@ -45,7 +45,7 @@ Tak, kuchnia zawiera:
 Tak! Apartament posiada balkon z meblami ogrodowymi i widokiem na góry.
 
 ### Czy jest telewizor?
-Tak, w salonie znajduje się Smart TV.
+Tak, w salonie znajduje się telewizor.
 
 ### Czy są dostępne ręczniki i pościel?
 Tak, zapewniamy komplet czystej pościeli i ręczników dla wszystkich gości.
@@ -56,7 +56,7 @@ Tak, zapewniamy komplet czystej pościeli i ręczników dla wszystkich gości.
 Tak, oferujemy **bezpłatny parking** przy budynku.
 
 ### Jak daleko jest do wyciągu narciarskiego?
-Wyciąg narciarski znajduje się w odległości zaledwie **150 metrów** od apartamentu - około 2 minuty spacerem.
+Wyciąg narciarski znajduje się w odległości zaledwie **200 metrów** od apartamentu - około 2 minuty spacerem.
 
 ### Jak dojechać do apartamentu?
 **Samochodem:**
@@ -72,10 +72,10 @@ Wyciąg narciarski znajduje się w odległości zaledwie **150 metrów** od apar
 
 ### Co można robić zimą?
 Czarna Góra zimą oferuje:
-- Narciarstwo i snowboarding (150m od apartamentu)
+- Narciarstwo i snowboarding (200m od apartamentu)
 - Spacery w rakietach śnieżnych
 - Wycieczki krajoznawcze
-- Relaks w saunie i basenie (200m)
+- Relaks w saunie i basenie (100m)
 - Ślizgawka dla dzieci
 
 ### Co można robić latem?
@@ -87,9 +87,9 @@ Latem dostępne są:
 - Zwiedzanie okolicznych atrakcji (Jaskinia Niedźwiedzia, wodospady)
 
 ### Gdzie można zjeść?
-- **100m:** Restauracja górska z polską kuchnią
-- **150m:** Pizzeria
-- **200m:** Kawiarnia
+- **300m:** Restauracja górska z polską kuchnią
+- **100m:** Pizzeria
+- **100m:** Kawiarnia
 - Możliwość gotowania we własnej, w pełni wyposażonej kuchni
 
 ### Czy w pobliżu jest sklep?
@@ -101,7 +101,7 @@ Wypożyczalnia sprzętu narciarskiego znajduje się ok. 200m od apartamentu, prz
 ## Rezerwacja i pobyt
 
 ### Jakie są godziny zameldowania i wymeldowania?
-- **Zameldowanie:** od 15:00
+- **Zameldowanie:** od 16:00
 - **Wymeldowanie:** do 11:00
 
 Możliwość elastycznych godzin w przypadku dłuższych pobytów - skontaktuj się z nami.
@@ -121,7 +121,6 @@ Tak, apartament jest dostępny przez cały rok. Sprawdź dostępność kontaktuj
 Tak! Oferujemy **atrakcyjne zniżki** dla:
 - Pobytów tygodniowych
 - Pobytów miesięcznych
-- Workation (praca zdalna z gór)
 
 ### Czy można przedłużyć pobyt na miejscu?
 Tak, w miarę dostępności apartamentu. Zalecamy wcześniejszy kontakt, aby upewnić się, że termin jest wolny.
@@ -131,7 +130,6 @@ Tak, w miarę dostępności apartamentu. Zalecamy wcześniejszy kontakt, aby upe
 ### Jakie są formy płatności?
 Akceptujemy:
 - Przelew bankowy
-- Płatność gotówką przy zameldowaniu
 - Płatność online (szczegóły w potwierdzeniu rezerwacji)
 
 ### Czy wystawiacie faktury VAT?
@@ -151,13 +149,10 @@ Absolutnie! Połączenie do **40 Mbps** bez problemu obsługuje:
 
 ### Czy jest miejsce do pracy?
 Tak, apartament ma:
-- Stół jadalny idealny do pracy
+- Stół jadalny w kuchnii i stół w salonie
 - Wygodne krzesła
 - Dobre oświetlenie
 - Możliwość pracy na balkonie
-
-### Czy oferujecie specjalne ceny dla workation?
-Tak! Mamy specjalne oferty dla osób pracujących zdalnie. Skontaktuj się z nami z hasłem "Workation".
 
 ## Bezpieczeństwo i komfort
 

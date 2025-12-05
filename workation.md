@@ -24,7 +24,7 @@ Połącz pracę z wypoczynkiem w malowniczych Sudetach. Apartament Bormio 15 to 
 ### Komfortowe miejsce do pracy
 
 #### Przestrzeń robocza
-- Stół jadalny idealny do pracy przy laptopie
+- Stół jadalny w kuchnii i stół w salonie
 - Wygodne krzesła
 - Dobre oświetlenie naturalne
 - Możliwość pracy na balkonie w ciepłe dni
@@ -63,9 +63,9 @@ Połącz pracę z wypoczynkiem w malowniczych Sudetach. Apartament Bormio 15 to 
 
 #### Po pracy - czas na aktywność
 **17:00+:**
-- **Zima:** Wieczorne narty przy oświetlonym stoku (150m od apartamentu)
+- **Zima:** Wieczorne narty przy oświetlonym stoku (200m od apartamentu)
 - **Lato:** Górskie wędrówki lub przejażdżka rowerowa
-- **Cały rok:** Basen i sauna (200m), spacery po okolicy
+- **Cały rok:** Basen i sauna (100m), spacery po okolicy
 
 ### Korzyści z workation w górach
 
@@ -100,15 +100,9 @@ Dla dwóch osób pracujących zdalnie:
 ### Długoterminowe pobyty
 Apartament przystosowany do dłuższych pobytów:
 - Pełne wyposażenie kuchni - gotowanie własnych posiłków
-- Pralka w budynku (opcjonalnie)
+- Pralka w mieszkaniu
 - Sklep spożywczy 100m od apartamentu
 - Atrakcyjne ceny dla pobytów tygodniowych/miesięcznych
-
-## Co mówią nasi goście workation?
-
-> "Przez dwa tygodnie pracowałem z Czarnej Góry. Internet bez zarzutu, a po pracy 30 minut na stoku. Najlepsza forma pracy zdalnej!" - Michał, developer
-
-> "Połączenie pracy i wypoczynku na najwyższym poziomie. Rano praca, wieczorem góry. Polecam!" - Anna, projektantka
 
 ## Praktyczne informacje
 
@@ -131,21 +125,12 @@ Apartament przystosowany do dłuższych pobytów:
 - **Parking:** Bezpłatny
 - **Kawa Nespresso:** Kapsułki do nabycia w sklepie (100m)
 
-## Rezerwacja workation
-
-Oferujemy **specjalne ceny dla pobytów roboczych**:
-- Zniżki dla rezerwacji tygodniowych
-- Elastyczne godziny zameldowania/wymeldowania
-- Możliwość przedłużenia pobytu
-
 ### Kontakt
 
 [Rezerwuj online](https://www.sunandsnow.pl/search/apartment/7620/803/2026-06-01/2026-06-07/2-2-11,1,11,1)
 
 **Telefon:** +48 22 450 26 26
 **Email:** rezerwacja@sunandsnow.pl
-
-Napisz do nas z hasłem "Workation" i otrzymasz specjalną ofertę!
 
 ---
 
@@ -156,11 +141,5 @@ A: Tak! Połączenie 40 Mbps obsługuje bez problemu wideokonferencje w HD, nawe
 
 **Q: Czy mogę przedłużyć pobyt na miejscu?**
 A: Tak, w miarę dostępności. Skontaktuj się z nami z wyprzedzeniem.
-
-**Q: Czy jest możliwość wystawienia faktury?**
-A: Oczywiście! Wystawiamy faktury VAT dla firm.
-
-**Q: Jak wygląda dostępność apartamentu w dni robocze?**
-A: W tygodniu (poza sezonem zimowym) apartament jest często dostępny. Sprawdź z nami!
 
 ---

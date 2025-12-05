@@ -508,7 +508,7 @@ Zapraszamy do komfortowego apartamentu w sercu Czarnej Góry, idealnego dla rodz
 - Rozkładana sofa (dodatkowe miejsce do spania dla 2 osób)
 - Telewizor
 - Balkon z widokiem na góry
-- Stół jadalny
+- Stół w salonie
 
 #### Kuchnia
 W pełni wyposażona kuchnia zawiera:
@@ -520,6 +520,7 @@ W pełni wyposażona kuchnia zawiera:
 - Ekspres Nespresso
 - Komplet naczyń i sztućców
 - Podstawowe przybory kuchenne
+- Stół jadalny
 
 #### Łazienka
 - Prysznic
@@ -540,6 +541,7 @@ W pełni wyposażona kuchnia zawiera:
 - Winda w budynku
 - Żelazko i deska do prasowania
 - Suszarka do włosów
+- Pralka w mieszkaniu
 
 ## Zasady pobytu
 
@@ -551,14 +553,15 @@ W pełni wyposażona kuchnia zawiera:
 - **Zakaz palenia** w apartamencie
 - **Zwierzęta:** Niestety, nie przyjmujemy zwierząt
 - **Cisza nocna:** 22:00 - 7:00
-- **Meldunek:** od 15:00
+- **Meldunek:** od 16:00
 - **Wymeldowanie:** do 11:00
 
 ### Co znajduje się w pobliżu?
 
-- **150m:** Wyciąg narciarski
-- **100m:** Restauracja i sklep spożywczy
-- **200m:** Basen i sauna
+- **200m:** Wyciąg narciarski
+- **100m:** Pizzeria, kawiarnia i sklep spożywczy
+- **100m:** Basen i sauna
+- **300m:** Restauracja górska z polską kuchnią
 - **Bezpłatny parking:** Przy budynku
 
 ## Ceny i rezerwacja

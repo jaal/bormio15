@@ -303,7 +303,7 @@ Po akceptacji warunków:
 - Szczegółowe instrukcje dojazdu i zameldowania
 
 ### Krok 4: Twój pobyt
-- Zameldowanie od 15:00
+- Zameldowanie od 16:00
 - Wymeldowanie do 11:00
 - W dniu przyjazdu otrzymasz klucze i wszystkie niezbędne informacje
 
@@ -364,7 +364,7 @@ Możemy pomóc w organizacji transferu - zapytaj podczas rezerwacji!
 ## Godziny zameldowania/wymeldowania
 
 ### Zameldowanie (Check-in)
-**Od godziny 15:00**
+**Od godziny 16:00**
 
 Jeśli planujesz wcześniejszy przyjazd, skontaktuj się z nami - postaramy się umożliwić wcześniejsze zameldowanie (w miarę dostępności).
 
@@ -376,7 +376,6 @@ W przypadku chęci późniejszego wymeldowania, prosimy o kontakt - postaramy si
 ## Specjalne oferty
 
 Zapytaj o specjalne oferty dla:
-- **Workation** - rabaty dla osób pracujących zdalnie
 - **Pobyty tygodniowe** - atrakcyjne ceny dla dłuższych rezerwacji
 - **Poza sezonem** - promocje w okresach niższego obłożenia
 - **Grupy** - możliwość wynajęcia kilku apartamentów
