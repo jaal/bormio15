@@ -33,6 +33,16 @@
     background-color: #000 !important;
   }
 
+  // On mobile, sidebar should appear above content
+  .sidebar {
+    z-index: 10001 !important;
+  }
+
+  // Toggle button should be above sidebar
+  .sidebar-toggle-wrapper {
+    z-index: 10002 !important;
+  }
+
   // On mobile, when wrapper has is--pushed class, reset it
   .wrapper.is--pushed {
     transform: translateX(0) !important;
