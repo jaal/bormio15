@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bundle install:*)",
+      "Bash(ruby --version:*)",
+      "Bash(gem install:*)",
+      "Bash(bundle lock:*)",
+      "Bash(c++:*)",
+      "Bash(MAKE=\"make -j8\" MAKEFLAGS=\"-j8\" bundle config:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(bundle exec jekyll:*)",
+      "Bash(docker compose:*)",
+      "Bash(tree:*)",
+      "Bash(curl:*)",
+      "Bash(mkdir:*)",
+      "Bash(docker logs:*)",
+      "Bash(docker exec:*)",
+      "Bash(git checkout:*)",
+      "Bash(git remote remove:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial setup for bormio15.com\n\n- Configure site for custom domain\n- Add apartment rental pages (apartament, czarna-gora, workation, kontakt, faq)\n- Setup Docker environment for local development\n- Configure Jekyll with Basically Basic theme\n- Add images and assets\n- Create CNAME for GitHub Pages\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

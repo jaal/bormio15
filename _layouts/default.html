@@ -22,7 +22,7 @@
         </button>
       {% endif %}
 
-      <button class="toggle navicon-button larr" type="button">
+      <button class="toggle navicon-button larr open" type="button">
         <span class="toggle-inner">
           <span class="sidebar-toggle-label visually-hidden">{{ site.data.theme.t.menu | default: 'Menu' }}</span>
           <span class="navicon"></span>
@@ -30,7 +30,7 @@
       </button>
     </div>
 
-    <div id="sidebar" class="sidebar">
+    <div id="sidebar" class="sidebar is--visible">
       <div class="inner">
         {% include navigation.html %}
         {% include contact-list.html %}
@@ -38,7 +38,7 @@
     </div>
 
     <div class="canvas">
-      <div class="wrapper">
+      <div class="wrapper is--pushed">
         {% include masthead.html %}
         <div class="initial-content">
           {{ content }}

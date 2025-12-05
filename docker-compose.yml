@@ -1,0 +1,11 @@
+services:
+  jekyll:
+    build: .
+    container_name: bormio15-jekyll
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - .:/srv/jekyll
+    environment:
+      - JEKYLL_ENV=development

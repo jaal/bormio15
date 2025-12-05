@@ -8,3 +8,136 @@
 @import "basically-basic/themes/{{ site.data.theme.skin | default: 'default' }}";
 
 @import "basically-basic";
+
+// Mobile and Tablet: Hide sidebar by default, show hamburger button
+@media (max-width: 1279px) {
+  // Hamburger button always visible on mobile
+  .sidebar-toggle-wrapper {
+    display: block !important;
+    background-color: transparent !important;
+  }
+
+  .sidebar-toggle-wrapper .toggle.navicon-button {
+    display: block !important;
+    background-color: transparent !important;
+  }
+
+  // Make toggle button black and white on mobile
+  .toggle.navicon-button .navicon,
+  .toggle.navicon-button .navicon::before,
+  .toggle.navicon-button .navicon::after {
+    background-color: #000 !important;
+  }
+
+  .toggle.navicon-button.open .navicon {
+    background-color: #000 !important;
+  }
+
+  // On mobile, when wrapper has is--pushed class, reset it
+  .wrapper.is--pushed {
+    transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
+  }
+
+  // Reset wrapper position on mobile/tablet (no sidebar push)
+  .wrapper {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  // Ensure canvas takes full width
+  .canvas {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  // Ensure body/html take full width
+  body {
+    overflow-x: hidden;
+  }
+
+  // Remove max-width constraints on inner content
+  .inner {
+    max-width: 100% !important;
+  }
+
+  // Ensure main content uses full width
+  main .inner {
+    max-width: 100% !important;
+  }
+}
+
+// Desktop (1280px and above): Sidebar visible by default, toggle button visible
+@media (min-width: 1280px) {
+  // Show toggle button on desktop (arrow/hamburger)
+  .sidebar-toggle-wrapper {
+    display: block !important;
+  }
+
+  .sidebar-toggle-wrapper .toggle.navicon-button {
+    display: block !important;
+  }
+
+  // On desktop, when sidebar is visible, push the wrapper
+  .wrapper.is--pushed {
+    transform: translateX(480px) !important;
+    -webkit-transform: translateX(480px) !important;
+    transform-origin: right;
+    transition: transform 0.4s ease;
+  }
+
+  // When sidebar is hidden, wrapper expands to full width
+  .wrapper:not(.is--pushed) {
+    transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    transition: transform 0.4s ease;
+  }
+
+  // Expand canvas when sidebar is hidden
+  .sidebar:not(.is--visible) ~ .canvas {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  // Adjust padding for full-width content when sidebar is hidden
+  .wrapper:not(.is--pushed) {
+    .intro > .inner,
+    main > .inner {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+
+  // Remove purple/colored background from toggle button
+  .sidebar-toggle-wrapper {
+    background-color: transparent !important;
+  }
+
+  .sidebar-toggle-wrapper .toggle.navicon-button {
+    background-color: transparent !important;
+  }
+
+  // Make toggle button black and white
+  .toggle.navicon-button .navicon,
+  .toggle.navicon-button .navicon::before,
+  .toggle.navicon-button .navicon::after {
+    background-color: #000 !important;
+  }
+
+  // Arrow styles (when open)
+  .toggle.navicon-button.open .navicon {
+    background-color: #000 !important;
+  }
+}
+
+// Make menu items visible immediately when sidebar is open
+.sidebar.is--visible li {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  opacity: 1;
+}

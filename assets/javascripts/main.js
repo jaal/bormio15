@@ -8,6 +8,8 @@
  * https://github.com/mmistakes/jekyll-theme-basically-basic/blob/master/LICENSE
 */
 
+console.log('main.js loaded - version 2.0');
+
 var menuItems = document.querySelectorAll('#sidebar li');
 
 // Get vendor transition property
@@ -25,6 +27,12 @@ function animateMenuItems() {
   }
 };
 
+// Initialize menu items as visible on page load
+for (var i = 0; i < menuItems.length; i++) {
+  menuItems[i].classList.add('is--moved');
+}
+
+// Declare variables once at the top
 var myWrapper = document.querySelector('.wrapper');
 var myMenu = document.querySelector('.sidebar');
 var myToggle = document.querySelector('.toggle');
@@ -32,8 +40,30 @@ var myInitialContent = document.querySelector('.initial-content');
 var mySearchContent = document.querySelector('.search-content');
 var mySearchToggle = document.querySelector('.search-toggle');
 
+// Handle initial state based on screen size
+function initializeMenuState() {
+  if (window.innerWidth < 1280) {
+    // Mobile: hide sidebar by default
+    myMenu.classList.remove('is--visible');
+    myWrapper.classList.remove('is--pushed');
+    myToggle.classList.remove('open');
+  } else {
+    // Desktop: show sidebar by default
+    myMenu.classList.add('is--visible');
+    myWrapper.classList.add('is--pushed');
+    myToggle.classList.add('open');
+  }
+}
+
+// Initialize on page load
+initializeMenuState();
+
+// Re-initialize on window resize
+window.addEventListener('resize', initializeMenuState);
+
 // Toggle sidebar visibility
 function toggleClassMenu() {
+  console.log('toggleClassMenu called, window width:', window.innerWidth);
   myMenu.classList.add('is--animatable');
   if (!myMenu.classList.contains('is--visible')) {
     myMenu.classList.add('is--visible');
@@ -43,6 +73,40 @@ function toggleClassMenu() {
     myMenu.classList.remove('is--visible');
     myToggle.classList.remove('open');
     myWrapper.classList.remove('is--pushed');
+  }
+
+  // Force update of content width on desktop
+  console.log('About to call updateContentWidth, width check:', window.innerWidth >= 1280);
+  if (window.innerWidth >= 1280) {
+    updateContentWidth();
+  }
+}
+
+// Function to update content width based on sidebar state
+function updateContentWidth() {
+  var allInners = document.querySelectorAll('.inner');
+  var mainInners = document.querySelectorAll('main > .inner');
+  var isPushed = myWrapper.classList.contains('is--pushed');
+
+  console.log('updateContentWidth called, isPushed:', isPushed);
+  console.log('Found elements:', allInners.length);
+
+  if (isPushed) {
+    // Sidebar visible - constrain width
+    allInners.forEach(function(element) {
+      element.style.maxWidth = '1024px';
+      element.style.width = '';
+    });
+  } else {
+    // Sidebar hidden - expand to full width
+    allInners.forEach(function(element) {
+      element.style.maxWidth = 'none';
+      element.style.width = '100%';
+    });
+    mainInners.forEach(function(element) {
+      element.style.maxWidth = 'none';
+      element.style.width = '100%';
+    });
   }
 }
 
