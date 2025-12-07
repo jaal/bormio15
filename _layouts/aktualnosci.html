@@ -1,0 +1,74 @@
+---
+layout: page
+---
+
+{{ content }}
+
+<div class="entries-list" id="posts-container">
+  {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+  {% for post in sorted_posts %}
+    <div class="post-item" data-index="{{ forloop.index0 }}" style="display: none;">
+      {% include entry.html %}
+    </div>
+  {% endfor %}
+</div>
+
+<div id="load-more-container" style="text-align: center; margin: 2rem 0;">
+  <button id="load-more-btn" class="btn" style="display: none; padding: 0.75rem 2rem; font-size: 1rem; cursor: pointer; background-color: #0066cc; color: white; border: none; border-radius: 4px;">
+    Więcej
+  </button>
+</div>
+
+<style>
+  .entries-list {
+    margin: 2rem 0;
+  }
+
+  #load-more-btn:hover {
+    background-color: #0052a3;
+  }
+
+  #load-more-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+</style>
+
+<script>
+  (function() {
+    const postsPerPage = 6;
+    let currentPage = 0;
+    const posts = document.querySelectorAll('.post-item');
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const totalPosts = posts.length;
+
+    function showPosts() {
+      const start = currentPage * postsPerPage;
+      const end = start + postsPerPage;
+
+      for (let i = start; i < end && i < totalPosts; i++) {
+        posts[i].style.display = 'block';
+      }
+
+      currentPage++;
+
+      // Hide button if all posts are shown
+      if (currentPage * postsPerPage >= totalPosts) {
+        loadMoreBtn.style.display = 'none';
+      }
+    }
+
+    // Show initial posts
+    showPosts();
+
+    // Show the button if there are more posts to load
+    if (totalPosts > postsPerPage) {
+      loadMoreBtn.style.display = 'inline-block';
+    }
+
+    // Add click event to load more button
+    loadMoreBtn.addEventListener('click', function() {
+      showPosts();
+    });
+  })();
+</script>
