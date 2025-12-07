@@ -83,6 +83,9 @@ languages: ["pl", "en", "de"]
 default_lang: "pl"
 exclude_from_localization: ["assets", "css", "js", "images"]
 
+# Permalink structure for blog posts
+permalink: /aktualnosci/:year-:month-:day-:title/
+
 # Front Matter Defaults
 defaults:
   # _posts
