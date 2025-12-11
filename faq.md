@@ -2,6 +2,8 @@
 layout: page
 title: Pytania i odpowiedzi
 permalink: /faq/
+lang: pl
+slug: faq
 ---
 
 ## Najczęściej zadawane pytania (FAQ)

@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Apartament
-permalink: /apartament/
-lang: pl
+title: Apartment
+permalink: /en/apartment/
+lang: en
 slug: apartment
 ---
 
-# Apartament Bormio 15
+# Apartment Bormio 15
 
-## Galeria
+## Gallery
 
 <style>
 .apartment-gallery {
@@ -244,11 +244,11 @@ slug: apartment
 
 <div class="apartment-gallery">
   <div class="gallery-main">
-    <img id="gallery-image" src="{{ '/assets/images/gallery03/7c50bc3a_original.jpg' | relative_url }}" alt="Salon">
+    <img id="gallery-image" src="{{ '/assets/images/gallery03/7c50bc3a_original.jpg' | relative_url }}" alt="Living room">
     <button class="gallery-nav prev" onclick="changeImage(-1)">‹</button>
     <button class="gallery-nav next" onclick="changeImage(1)">›</button>
   </div>
-  <div class="gallery-caption" id="gallery-caption">Salon</div>
+  <div class="gallery-caption" id="gallery-caption">Living room</div>
   <div class="gallery-counter" id="gallery-counter">1 / 9</div>
 </div>
 
@@ -256,48 +256,48 @@ slug: apartment
 const images = [
   {
     src: '{{ "/assets/images/gallery03/7c50bc3a_original.jpg" | relative_url }}',
-    alt: 'Salon',
-    caption: 'Salon'
+    alt: 'Living room',
+    caption: 'Living room'
   },
   {
     src: '{{ "/assets/images/gallery03/31889db2_original.jpg" | relative_url }}',
-    alt: 'Salon - widok ogólny',
-    caption: 'Salon'
+    alt: 'Living room - general view',
+    caption: 'Living room'
   },
   {
     src: '{{ "/assets/images/gallery03/ab77ef4d_original.jpg" | relative_url }}',
-    alt: 'Salon i kuchnia',
-    caption: 'Salon i kuchnia'
+    alt: 'Living room and kitchen',
+    caption: 'Living room and kitchen'
   },
   {
     src: '{{ "/assets/images/gallery03/70acdc13_original.jpg" | relative_url }}',
-    alt: 'Salon i sypialnia',
-    caption: 'Salon i sypialnia'
+    alt: 'Living room and bedroom',
+    caption: 'Living room and bedroom'
   },
   {
     src: '{{ "/assets/images/gallery03/3b3383db_original.jpg" | relative_url }}',
-    alt: 'Sypialnia',
-    caption: 'Sypialnia'
+    alt: 'Bedroom',
+    caption: 'Bedroom'
   },
   {
     src: '{{ "/assets/images/gallery03/d4246741_original.jpg" | relative_url }}',
-    alt: 'Sypialnia - łóżka',
-    caption: 'Sypialnia'
+    alt: 'Bedroom - beds',
+    caption: 'Bedroom'
   },
   {
     src: '{{ "/assets/images/gallery03/ae30c472_original.jpg" | relative_url }}',
-    alt: 'Sypialnia - widok',
-    caption: 'Sypialnia'
+    alt: 'Bedroom - view',
+    caption: 'Bedroom'
   },
   {
     src: '{{ "/assets/images/gallery03/d8d222f3_original.jpg" | relative_url }}',
-    alt: 'Łazienka',
-    caption: 'Łazienka'
+    alt: 'Bathroom',
+    caption: 'Bathroom'
   },
   {
     src: '{{ "/assets/images/gallery03/f6e67298_original.jpg" | relative_url }}',
-    alt: 'Łazienka - prysznic',
-    caption: 'Łazienka'
+    alt: 'Bathroom - shower',
+    caption: 'Bathroom'
   }
 ];
 
@@ -489,97 +489,97 @@ function handleSwipe() {
 }
 </script>
 
-Zapraszamy do komfortowego apartamentu w sercu Czarnej Góry, idealnego dla rodzin i grup przyjaciół pragnących aktywnie spędzić czas w górach.
+Welcome to a comfortable apartment in the heart of Czarna Góra, ideal for families and groups of friends looking to actively spend time in the mountains.
 
-## Szczegóły apartamentu
+## Apartment Details
 
-### Rozmiar i lokalizacja
-- **Powierzchnia:** 40 m²
-- **Piętro:** Pierwsze piętro
-- **Dostęp:** Winda w budynku
-- **Odległość od wyciągu:** 150 metrów
+### Size and Location
+- **Area:** 40 m²
+- **Floor:** First floor
+- **Access:** Elevator in the building
+- **Distance from ski lift:** 150 meters
 
-### Pomieszczenia
+### Rooms
 
-#### Sypialnia
-- Dwa wygodne łóżka pojedyncze
-- Szafa na ubrania
-- Spokojne wnętrze zapewniające komfortowy sen
+####Bedroom
+- Two comfortable single beds
+- Wardrobe for clothes
+- Peaceful interior ensuring comfortable sleep
 
-#### Salon
-- Rozkładana sofa (dodatkowe miejsce do spania dla 2 osób)
-- Telewizor
-- Balkon z widokiem na góry
-- Stół w salonie
+#### Living Room
+- Sofa bed (additional sleeping space for 2 people)
+- TV
+- Balcony with mountain views
+- Dining table
 
-#### Kuchnia
-W pełni wyposażona kuchnia zawiera:
-- Lodówkę z zamrażalnikiem
-- Kuchenkę elektryczną z piekarnikiem
-- Zmywarkę
-- Czajnik elektryczny
-- Ekspres do kawy przelewowy
-- Ekspres Nespresso
-- Komplet naczyń i sztućców
-- Podstawowe przybory kuchenne
-- Stół jadalny
+#### Kitchen
+Fully equipped kitchen includes:
+- Refrigerator with freezer
+- Electric stove with oven
+- Dishwasher
+- Electric kettle
+- Drip coffee maker
+- Nespresso machine
+- Complete set of dishes and cutlery
+- Basic kitchen utensils
+- Dining table
 
-#### Łazienka
-- Prysznic
-- WC
-- Umywalka
-- Ręczniki i podstawowe przybory toaletowe
+#### Bathroom
+- Shower
+- Toilet
+- Sink
+- Towels and basic toiletries
 
-## Wyposażenie i udogodnienia
+## Equipment and Amenities
 
-### Technologia
-- **WiFi:** Bezpłatny internet do 40 Mbps
-- **Telewizor:** Smart TV
-- **Sejf:** Dla Twoich cennych rzeczy
+### Technology
+- **WiFi:** Free internet up to 40 Mbps
+- **TV:** Smart TV
+- **Safe:** For your valuables
 
-### Dodatkowe udogodnienia
-- Balkon z meblami ogrodowymi
-- Bezpłatny parking
-- Winda w budynku
-- Żelazko i deska do prasowania
-- Suszarka do włosów
-- Pralka w mieszkaniu
+### Additional Amenities
+- Balcony with garden furniture
+- Free parking
+- Elevator in the building
+- Iron and ironing board
+- Hair dryer
+- Washing machine in the apartment
 
-## Zasady pobytu
+## Stay Rules
 
-### Pojemność
-- **Maksymalna liczba gości:** 4 osoby
-- 2 osoby w sypialni + 2 osoby na rozkładanej sofie
+### Capacity
+- **Maximum number of guests:** 4 people
+- 2 people in bedroom + 2 people on sofa bed
 
-### Polityka
-- **Zakaz palenia** w apartamencie
-- **Zwierzęta:** Niestety, nie przyjmujemy zwierząt
-- **Cisza nocna:** 22:00 - 7:00
-- **Meldunek:** od 16:00
-- **Wymeldowanie:** do 11:00
+### Policy
+- **No smoking** in the apartment
+- **Pets:** Unfortunately, we do not accept pets
+- **Quiet hours:** 10:00 PM - 7:00 AM
+- **Check-in:** from 4:00 PM
+- **Check-out:** until 11:00 AM
 
-### Co znajduje się w pobliżu?
+### What's Nearby?
 
-- **200m:** Wyciąg narciarski
-- **100m:** Pizzeria, kawiarnia i sklep spożywczy
-- **100m:** Basen i sauna
-- **300m:** Restauracja górska z polską kuchnią
-- **Bezpłatny parking:** Przy budynku
+- **200m:** Ski lift
+- **100m:** Pizzeria, café, and grocery store
+- **100m:** Pool and sauna
+- **300m:** Mountain restaurant with Polish cuisine
+- **Free parking:** At the building
 
-## Ceny i rezerwacja
+## Prices and Reservations
 
-Aby poznać aktualne ceny i dokonać rezerwacji, zapraszamy do kontaktu:
+To learn about current prices and make a reservation, please contact us:
 
-[Rezerwuj online](https://www.sunandsnow.pl/search/apartment/7620/803/2026-06-01/2026-06-07/2-2-11,1,11,1)
+[Book Online](https://www.sunandsnow.pl/search/apartment/7620/803/2026-06-01/2026-06-07/2-2-11,1,11,1)
 
-**Telefon:** +48 22 450 26 26
+**Phone:** +48 22 450 26 26
 **Email:** rezerwacja@sunandsnow.pl
 
 ---
 
-### Idealne dla:
-- Rodzin z dziećmi
-- Grup przyjaciół (do 4 osób)
-- Par szukających spokojnego wypoczynku
-- Osób pracujących zdalnie (workation)
-- Miłośników narciarstwa i aktywności na świeżym powietrzu
+### Ideal for:
+- Families with children
+- Groups of friends (up to 4 people)
+- Couples seeking a peaceful getaway
+- Remote workers (workation)
+- Skiing and outdoor activity enthusiasts

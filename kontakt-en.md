@@ -1,67 +1,67 @@
 ---
 layout: page
-title: Kontakt
-permalink: /kontakt/
-lang: pl
+title: Contact
+permalink: /en/contact/
+lang: en
 slug: contact
 ---
 
-## Kontakt i Rezerwacja
+## Contact and Booking
 
-Wszystkie rezerwacje odbywają się za pomocą serwisu **Sunandsnow.pl**
+All bookings are made through **Sunandsnow.pl**
 
-## Dział rezerwacji
+## Reservations Department
 
-### Telefon
+### Phone
 **+48 22 450 26 26**
 
-Godziny kontaktu telefonicznego:
-- Poniedziałek - Piątek: 8:00 - 20:00
-- Sobota - Niedziela: 10:00 - 16:00
+Phone contact hours:
+- Monday - Friday: 8:00 AM - 8:00 PM
+- Saturday - Sunday: 10:00 AM - 4:00 PM
 
 ### Email
 **rezerwacja@sunandsnow.pl**
 
-### Adres apartamentu
-**Apartament Bormio 15**
+### Apartment Address
+**Apartment Bormio 15**
 Na Skarpie 10/15
 57-512 Biała Woda
-Polska
+Poland
 
 **GPS:** 50.2613466, 16.8115155
 
-## Sprawdź dostępność i zarezerwuj
+## Check Availability and Book
 
 <form id="booking-form" class="booking-form">
   <div class="form-row">
     <div class="form-group">
-      <label for="start-date">Data przyjazdu * <small>(dd.mm.rrrr)</small></label>
-      <input type="date" id="start-date" name="start-date" required title="Wybierz datę przyjazdu">
+      <label for="start-date">Check-in date * <small>(dd/mm/yyyy)</small></label>
+      <input type="date" id="start-date" name="start-date" required title="Select check-in date">
     </div>
 
     <div class="form-group">
-      <label for="end-date">Data wyjazdu * <small>(dd.mm.rrrr)</small></label>
-      <input type="date" id="end-date" name="end-date" required title="Wybierz datę wyjazdu">
+      <label for="end-date">Check-out date * <small>(dd/mm/yyyy)</small></label>
+      <input type="date" id="end-date" name="end-date" required title="Select check-out date">
     </div>
   </div>
 
   <div class="form-group">
-    <label for="adults">Liczba dorosłych *</label>
-    <input type="number" id="adults" name="adults" min="1" max="4" value="2" required title="Podaj liczbę osób dorosłych (1-4)">
+    <label for="adults">Number of adults *</label>
+    <input type="number" id="adults" name="adults" min="1" max="4" value="2" required title="Enter number of adults (1-4)">
   </div>
 
   <div class="form-group">
-    <label for="kids-count">Liczba dzieci (0-17 lat)</label>
-    <input type="number" id="kids-count" name="kids-count" min="0" max="3" value="0" title="Podaj liczbę dzieci (0-3)">
+    <label for="kids-count">Number of children (0-17 years)</label>
+    <input type="number" id="kids-count" name="kids-count" min="0" max="3" value="0" title="Enter number of children (0-3)">
   </div>
 
   <div id="kids-ages-container" style="display: none;">
-    <label>Wiek dzieci:</label>
+    <label>Children's ages:</label>
     <div id="kids-ages"></div>
   </div>
 
-  <button type="submit" class="btn-primary">Sprawdź dostępność i ceny</button>
-  <p class="form-note">Zostaniesz przekierowany do systemu rezerwacji Sunandsnow.pl</p>
+  <button type="submit" class="btn-primary">Check Availability and Prices</button>
+  <p class="form-note">You will be redirected to the Sunandsnow.pl booking system</p>
 </form>
 
 <script>
@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const ageInput = document.createElement('div');
         ageInput.className = 'kid-age-input';
         ageInput.innerHTML = `
-          <label for="kid-age-${i}">Wiek dziecka ${i + 1} *</label>
-          <input type="number" id="kid-age-${i}" name="kid-age-${i}" min="0" max="17" required title="Podaj wiek dziecka (0-17 lat)">
+          <label for="kid-age-${i}">Child ${i + 1} age *</label>
+          <input type="number" id="kid-age-${i}" name="kid-age-${i}" min="0" max="17" required title="Enter child's age (0-17 years)">
         `;
         kidsAgesDiv.appendChild(ageInput);
       }
@@ -125,12 +125,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Validate dates
     if (!startDate || !endDate) {
-      alert('Proszę wybrać daty przyjazdu i wyjazdu.');
+      alert('Please select check-in and check-out dates.');
       return;
     }
 
     if (new Date(endDate) <= new Date(startDate)) {
-      alert('Data wyjazdu musi być późniejsza niż data przyjazdu.');
+      alert('Check-out date must be after check-in date.');
       return;
     }
 
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
       for (let i = 0; i < numKids; i++) {
         const ageInput = document.getElementById(`kid-age-${i}`);
         if (!ageInput || !ageInput.value) {
-          alert(`Proszę podać wiek dziecka ${i + 1}.`);
+          alert(`Please enter the age of child ${i + 1}.`);
           return;
         }
         const age = parseInt(ageInput.value);
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Build the final URL
-    const baseUrl = 'https://www.sunandsnow.pl/search/apartment/7620/803';
+    const baseUrl = 'https://www.sunandsnow.pl/en/search/apartment/7620/803';
     const finalUrl = `${baseUrl}/${startDate}/${endDate}/${peopleString}?`;
 
     // Track booking form submission with PostHog
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (window.posthog) {
       posthog.capture('booking_form_submitted', {
-        page: 'kontakt',
+        page: 'contact_en',
         start_date: startDate,
         end_date: endDate,
         adults: adults,
@@ -309,139 +309,111 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ---
 
-### Lub skontaktuj się z nami bezpośrednio
+### Or Contact Us Directly
 
-### Krok 1: Skontaktuj się z nami
-Zadzwoń lub napisz, podając:
-- Preferowane daty pobytu
-- Liczbę osób
-- Ewentualne dodatkowe pytania lub życzenia
+### Step 1: Contact Us
+Call or write, providing:
+- Preferred stay dates
+- Number of people
+- Any additional questions or requests
 
-### Krok 2: Potwierdzenie dostępności
-Sprawdzimy dostępność apartamentu w wybranym terminie i prześlemy Ci:
-- Potwierdzenie dostępności
-- Szczegóły cenowe
-- Warunki rezerwacji
+### Step 2: Availability Confirmation
+We'll check the apartment's availability for the chosen dates and send you:
+- Availability confirmation
+- Pricing details
+- Reservation terms
 
-### Krok 3: Potwierdzenie rezerwacji
-Po akceptacji warunków:
-- Przelew zadatku (jeśli wymagany)
-- Otrzymasz potwierdzenie rezerwacji
-- Szczegółowe instrukcje dojazdu i zameldowania
+### Step 3: Reservation Confirmation
+After accepting the terms:
+- Down payment transfer (if required)
+- You'll receive booking confirmation
+- Detailed arrival and check-in instructions
 
-### Krok 4: Twój pobyt
-- Zameldowanie od 16:00
-- Wymeldowanie do 11:00
-- W dniu przyjazdu otrzymasz klucze i wszystkie niezbędne informacje
+### Step 4: Your Stay
+- Check-in from 4:00 PM
+- Check-out until 11:00 AM
+- On arrival day, you'll receive keys and all necessary information
 
-## Formularz kontaktowy
+## Contact Form
 
-Wyślij nam wiadomość na adres **rezerwacja@sunandsnow.pl** z następującymi informacjami:
-- Imię i nazwisko
-- Telefon kontaktowy
+Send us a message to **rezerwacja@sunandsnow.pl** with the following information:
+- First and last name
+- Contact phone
 - Email
-- Data przyjazdu
-- Data wyjazdu
-- Liczba osób
-- Dodatkowe informacje/pytania
+- Arrival date
+- Departure date
+- Number of people
+- Additional information/questions
 
-## Lokalizacja
+## Location
 
-### Mapa dojazdu
+### Directions Map
 
-**Adres GPS:**
+**GPS Address:**
 Na Skarpie 10/15, 57-512 Biała Woda
 GPS: 50.2613466, 16.8115155
 
-[Otwórz w Google Maps](https://maps.app.goo.gl/HMwJWPDvitMMTkCE8)
+[Open in Google Maps](https://maps.app.goo.gl/HMwJWPDvitMMTkCE8)
 
-### Dojazd samochodem
+### Directions by Car
 
-**Z Wrocławia (130 km, ok. 2h):**
-1. Droga krajowa DK8 w kierunku Kłodzka
-2. Następnie przez Lądek-Zdrój
-3. Dalej do Stronia Śląskiego
-4. Z Stronia Śląskiego do Czarnej Góry (ok. 8 km)
+**From Wrocław (130 km, approx. 2h):**
+1. National road DK8 towards Kłodzko
+2. Then through Lądek-Zdrój
+3. Continue to Stronie Śląskie
+4. From Stronie Śląskie to Czarna Góra (approx. 8 km)
 
-**Z Warszawy (450 km, ok. 5h):**
-1. Autostrada A4 w kierunku Wrocławia
-2. Zjazd na DK8 w kierunku Kłodzka
-3. Dalej jak z Wrocławia
+**From Warsaw (450 km, approx. 5h):**
+1. A4 highway towards Wrocław
+2. Exit onto DK8 towards Kłodzko
+3. Continue as from Wrocław
 
-**Z Krakowa (320 km, ok. 4h):**
-1. Przez Częstochowę do Wrocławia
-2. Następnie DK8 w kierunku Kłodzka
-3. Dalej jak z Wrocławia
+**From Krakow (320 km, approx. 4h):**
+1. Through Częstochowa to Wrocław
+2. Then DK8 towards Kłodzko
+3. Continue as from Wrocław
 
-**Bezpłatny parking** dostępny przy budynku!
+**Free parking** available at the building!
 
-### Transport publiczny
+### Public Transport
 
-**Pociąg + autobus:**
-1. Pociąg do Kłodzka
-2. Autobus z Kłodzka do Stronia Śląskiego
-3. Transfer lokalny lub taxi do Czarnej Góry (8 km)
+**Train + bus:**
+1. Train to Kłodzko
+2. Bus from Kłodzko to Stronie Śląskie
+3. Local transfer or taxi to Czarna Góra (8 km)
 
-**Autobus bezpośredni:**
-- Z Wrocławia do Stronia Śląskiego
-- Następnie transfer lokalny
+**Direct bus:**
+- From Wrocław to Stronie Śląskie
+- Then local transfer
 
-**Transfer z dworca/lotniska:**
-Możemy pomóc w organizacji transferu - zapytaj podczas rezerwacji!
+**Transfer from station/airport:**
+We can help arrange transfer - ask when booking!
 
-## Godziny zameldowania/wymeldowania
+## Check-in/Check-out Times
 
-### Zameldowanie (Check-in)
-**Od godziny 16:00**
+### Check-in
+**From 4:00 PM**
 
-Jeśli planujesz wcześniejszy przyjazd, skontaktuj się z nami - postaramy się umożliwić wcześniejsze zameldowanie (w miarę dostępności).
+If you're planning an earlier arrival, contact us - we'll try to enable early check-in (subject to availability).
 
-### Wymeldowanie (Check-out)
-**Do godziny 11:00**
+### Check-out
+**Until 11:00 AM**
 
-W przypadku chęci późniejszego wymeldowania, prosimy o kontakt - postaramy się spełnić Twoją prośbę (w miarę możliwości).
+If you wish a later check-out, please contact us - we'll try to fulfill your request (subject to availability).
 
-## Specjalne oferty
+## Special Offers
 
-Zapytaj o specjalne oferty dla:
-- **Pobyty tygodniowe** - atrakcyjne ceny dla dłuższych rezerwacji
-- **Poza sezonem** - promocje w okresach niższego obłożenia
-- **Grupy** - możliwość wynajęcia kilku apartamentów
+Ask about special offers for:
+- **Weekly stays** - attractive prices for longer bookings
+- **Off-season** - promotions during lower occupancy periods
+- **Groups** - possibility of renting multiple apartments
 
-## FAQ - Najczęstsze pytania
+## FAQ - Frequently Asked Questions
 
-Szukasz odpowiedzi na konkretne pytanie? Sprawdź naszą [stronę FAQ](faq.md).
+Looking for answers to specific questions? Check our [FAQ page](/en/faq/).
 
-## Polityka prywatności
+## Privacy Policy
 
-Twoje dane osobowe są przetwarzane zgodnie z RODO wyłącznie w celu obsługi rezerwacji i nie są przekazywane osobom trzecim.
-
-## Śledź nas w social media
-
-*[Tutaj można dodać linki do mediów społecznościowych, jeśli są dostępne]*
-
-- Facebook: [Link]
-- Instagram: [Link]
-
-## Opinie gości
-
-Przeczytaj, co mówią nasi goście:
-- [Booking.com - Link]
-- [Airbnb - Link]
-- [Google Reviews - Link]
-
----
-
-## Zarezerwuj już dziś!
-
-### Telefon
-**+48 22 450 26 26**
-
-Godziny kontaktu telefonicznego:
-- Poniedziałek - Piątek: 8:00 - 20:00
-- Sobota - Niedziela: 10:00 - 16:00
-
-### Email
-**rezerwacja@sunandsnow.pl**
+Your personal data is processed in accordance with GDPR solely for booking purposes and is not shared with third parties.
 
 ---

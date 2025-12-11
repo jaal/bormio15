@@ -1,45 +1,84 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+
 <footer id="footer" class="site-footer">
   <div class="inner">
     <div class="footer-content">
       <div class="footer-section">
-        <h3>Kontakt</h3>
-        <p>
-          <strong>Rezerwacje:</strong><br>
-          Tel: <a href="tel:+48224502626">+48 22 450 26 26</a><br>
-          Email: <a href="mailto:rezerwacja@sunandsnow.pl">rezerwacja@sunandsnow.pl</a>
-        </p>
+        {% if current_lang == 'en' %}
+          <h3>Contact</h3>
+          <p>
+            <strong>Reservations:</strong><br>
+            Tel: <a href="tel:+48224502626">+48 22 450 26 26</a><br>
+            Email: <a href="mailto:rezerwacja@sunandsnow.pl">rezerwacja@sunandsnow.pl</a>
+          </p>
+        {% else %}
+          <h3>Kontakt</h3>
+          <p>
+            <strong>Rezerwacje:</strong><br>
+            Tel: <a href="tel:+48224502626">+48 22 450 26 26</a><br>
+            Email: <a href="mailto:rezerwacja@sunandsnow.pl">rezerwacja@sunandsnow.pl</a>
+          </p>
+        {% endif %}
       </div>
 
       <div class="footer-section">
-        <h3>Lokalizacja</h3>
-        <p>
-          <strong>Apartament Bormio 15</strong><br>
-          Na Skarpie 10/15<br>
-          57-512 Biała Woda<br>
-          Polska
-        </p>
-        <p>
-          <a href="https://maps.app.goo.gl/HMwJWPDvitMMTkCE8" target="_blank">Mapa dojazdu</a>
-        </p>
+        {% if current_lang == 'en' %}
+          <h3>Location</h3>
+          <p>
+            <strong>Apartment Bormio 15</strong><br>
+            Na Skarpie 10/15<br>
+            57-512 Biała Woda<br>
+            Poland<br>
+            GPS: 50.2613466, 16.8115155
+          </p>
+          <p>
+            <a href="https://maps.app.goo.gl/HMwJWPDvitMMTkCE8" target="_blank">Directions Map</a>
+          </p>
+        {% else %}
+          <h3>Lokalizacja</h3>
+          <p>
+            <strong>Apartament Bormio 15</strong><br>
+            Na Skarpie 10/15<br>
+            57-512 Biała Woda<br>
+            Polska<br>
+            GPS: 50.2613466, 16.8115155
+          </p>
+          <p>
+            <a href="https://maps.app.goo.gl/HMwJWPDvitMMTkCE8" target="_blank">Mapa dojazdu</a>
+          </p>
+        {% endif %}
       </div>
 
       <div class="footer-section">
-        <h3>Informacje</h3>
-        <p>
-          <a href="/kontakt">Kontakt i rezerwacja</a><br>
-          <a href="/faq">FAQ - Najczęstsze pytania</a><br>
-          <a href="/polityka-prywatnosci">Polityka Prywatności</a><br>
-          <a href="/polityka-cookies">Polityka Cookies</a>
-        </p>
+        {% if current_lang == 'en' %}
+          <h3>Information</h3>
+          <p>
+            <a href="/en/contact/">Contact and Booking</a><br>
+            <a href="/en/faq/">FAQ - Frequently Asked Questions</a><br>
+            <a href="/polityka-prywatnosci">Privacy Policy</a><br>
+            <a href="/polityka-cookies">Cookie Policy</a>
+          </p>
+        {% else %}
+          <h3>Informacje</h3>
+          <p>
+            <a href="/kontakt">Kontakt i rezerwacja</a><br>
+            <a href="/faq">FAQ - Najczęstsze pytania</a><br>
+            <a href="/polityka-prywatnosci">Polityka Prywatności</a><br>
+            <a href="/polityka-cookies">Polityka Cookies</a>
+          </p>
+        {% endif %}
       </div>
     </div>
 
     <div class="footer-bottom">
+      <div class="footer-language-switcher">
+        {% include language-switcher.html %}
+      </div>
       <div class="copyright">
         {% if site.copyright %}
           {{ site.copyright | markdownify }}
         {% else %}
-          <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}.<br>Technologie 21 Aleksander Jaworski, NIP: 6912215667</p>
+          <p>&copy; {{ site.time | date: '%Y' }} bormio15.com | {{ site.title }}<br>Technologie 21 Aleksander Jaworski</p>
         {% endif %}
       </div>
     </div>
@@ -108,6 +147,16 @@
 .footer-bottom {
   text-align: center;
   padding: 1rem 0;
+}
+
+.footer-language-switcher {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer-language-switcher .language-switcher {
+  margin: 0;
 }
 
 .footer-bottom .copyright {
