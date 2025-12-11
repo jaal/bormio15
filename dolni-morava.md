@@ -2,6 +2,8 @@
 layout: page
 title: Dolní Morava
 permalink: /dolni-morava/
+lang: pl
+slug: dolni-morava
 description: "Rodzinny resort górski Dolní Morava — atrakcje całoroczne: Sky Bridge, kolejka Mamucia, trasy narciarskie, tor bobslejowy i wellness."
 ---
 

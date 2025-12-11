@@ -1,0 +1,25 @@
+pl:
+  site_title: "Apartament Bormio 15 - Czarna Góra"
+  language_name: "Polski"
+  language_code: "pl"
+  nav:
+    home: "Główna"
+    apartment: "Apartament"
+    czarna_gora: "Czarna Góra"
+    dolni_morava: "Dolní Morava"
+    workation: "Workation"
+    faq: "FAQ"
+    contact: "Kontakt"
+
+en:
+  site_title: "Apartment Bormio 15 - Czarna Góra"
+  language_name: "English"
+  language_code: "en"
+  nav:
+    home: "Home"
+    apartment: "Apartment"
+    czarna_gora: "Czarna Góra"
+    dolni_morava: "Dolní Morava"
+    workation: "Workation"
+    faq: "FAQ"
+    contact: "Contact"

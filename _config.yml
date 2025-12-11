@@ -78,6 +78,11 @@ exclude:
 # Permalink structure for blog posts
 permalink: /aktualnosci/:year-:month-:day-:title/
 
+# Languages configuration
+languages: ["pl", "en"]
+default_lang: "pl"
+exclude_from_localization: ["assets", "css", "js", "images"]
+
 # Front Matter Defaults
 defaults:
   # _posts
