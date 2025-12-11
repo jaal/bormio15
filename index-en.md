@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Główna
-permalink: /
-lang: pl
+title: Home
+permalink: /en/
+lang: en
 slug: home
 ---
 
@@ -231,7 +231,7 @@ slug: home
 
 <div class="hero-gallery">
   <div class="hero-gallery-main">
-    <img id="hero-gallery-image" src="{{ '/assets/images/gallery03/7c50bc3a_original.jpg' | relative_url }}" alt="Salon">
+    <img id="hero-gallery-image" src="{{ '/assets/images/gallery03/7c50bc3a_original.jpg' | relative_url }}" alt="Living room">
     <button class="hero-gallery-nav prev" onclick="changeHeroImage(-1)">‹</button>
     <button class="hero-gallery-nav next" onclick="changeHeroImage(1)">›</button>
   </div>
@@ -242,48 +242,48 @@ slug: home
 const heroImages = [
   {
     src: '{{ "/assets/images/gallery03/7c50bc3a_original.jpg" | relative_url }}',
-    alt: 'Salon',
-    caption: 'Salon'
+    alt: 'Living room',
+    caption: 'Living room'
   },
   {
     src: '{{ "/assets/images/gallery03/31889db2_original.jpg" | relative_url }}',
-    alt: 'Salon - widok ogólny',
-    caption: 'Salon'
+    alt: 'Living room - general view',
+    caption: 'Living room'
   },
   {
     src: '{{ "/assets/images/gallery03/ab77ef4d_original.jpg" | relative_url }}',
-    alt: 'Salon i kuchnia',
-    caption: 'Salon i kuchnia'
+    alt: 'Living room and kitchen',
+    caption: 'Living room and kitchen'
   },
   {
     src: '{{ "/assets/images/gallery03/70acdc13_original.jpg" | relative_url }}',
-    alt: 'Salon i sypialnia',
-    caption: 'Salon i sypialnia'
+    alt: 'Living room and bedroom',
+    caption: 'Living room and bedroom'
   },
   {
     src: '{{ "/assets/images/gallery03/3b3383db_original.jpg" | relative_url }}',
-    alt: 'Sypialnia',
-    caption: 'Sypialnia'
+    alt: 'Bedroom',
+    caption: 'Bedroom'
   },
   {
     src: '{{ "/assets/images/gallery03/d4246741_original.jpg" | relative_url }}',
-    alt: 'Sypialnia - łóżka',
-    caption: 'Sypialnia'
+    alt: 'Bedroom - beds',
+    caption: 'Bedroom'
   },
   {
     src: '{{ "/assets/images/gallery03/ae30c472_original.jpg" | relative_url }}',
-    alt: 'Sypialnia - widok',
-    caption: 'Sypialnia'
+    alt: 'Bedroom - view',
+    caption: 'Bedroom'
   },
   {
     src: '{{ "/assets/images/gallery03/d8d222f3_original.jpg" | relative_url }}',
-    alt: 'Łazienka',
-    caption: 'Łazienka'
+    alt: 'Bathroom',
+    caption: 'Bathroom'
   },
   {
     src: '{{ "/assets/images/gallery03/f6e67298_original.jpg" | relative_url }}',
-    alt: 'Łazienka - prysznic',
-    caption: 'Łazienka'
+    alt: 'Bathroom - shower',
+    caption: 'Bathroom'
   }
 ];
 
@@ -468,85 +468,85 @@ function handleHeroSwipe() {
 }
 </script>
 
-## Apartament Bormio 15 w Czarnej Górze
+## Apartment Bormio 15 in Czarna Góra
 
-Witamy w apartamencie Bormio 15, idealnym miejscu na wypoczynek w sercu Czarnej Góry. Nasz komfortowy apartament to doskonała baza wypadowa dla miłośników narciarstwa, górskich wędrówek i jazdy na rowerze.
+Welcome to Apartment Bormio 15, the perfect place for a vacation in the heart of Czarna Góra. Our comfortable apartment is an excellent base for skiing enthusiasts, mountain hikers, and cyclists.
 
-## Dlaczego warto wybrać apartament Bormio 15?
+## Why choose Apartment Bormio 15?
 
-### Wyjątkowa lokalizacja
-- Zaledwie **150 metrów od wyciągu narciarskiego**
-- Bezpośredni dostęp do tras narciarskich i szlaków górskich
-- Czysty, górski klimat i wyjątkowe warunki śniegowe
+### Exceptional Location
+- Only **150 meters from the ski lift**
+- Direct access to ski slopes and mountain trails
+- Clean, mountain air and excellent snow conditions
 
-### Komfort i wygoda
-- Przestronny apartament **40 m²** na pierwszym piętrze
-- W pełni wyposażona kuchnia
-- Bezpłatne WiFi do 40 Mbps - idealne dla pracujących zdalnie
-- Balkon z widokiem na góry
-- Winda w budynku
+### Comfort and Convenience
+- Spacious **40 m²** apartment on the first floor
+- Fully equipped kitchen
+- Free WiFi up to 40 Mbps - ideal for remote workers
+- Balcony with mountain views
+- Elevator in the building
 
-### Dostępna infrastruktura
-- Restauracja i sklep spożywczy w odległości 100 metrów
-- Basen i sauna w pobliżu
-- Bezpłatny parking
+### Available Infrastructure
+- Restaurant and grocery store within 100 meters
+- Pool and sauna nearby
+- Free parking
 
-### Czyste powietrze
-Czarna Góra to rejon o wyjątkowo czystym powietrzu. Poziomy PM2.5 i PM10 znacznie poniżej norm zdrowotnych.
+### Clean Air
+Czarna Góra is an area with exceptionally clean air. PM2.5 and PM10 levels are significantly below health standards.
 
-## Aktywności przez cały rok
+## Year-Round Activities
 
-### Zima
-- Narciarstwo i snowboarding
-- Piesze wędrówki w rakietach śnieżnych
-- Relaks w saunie po dniu na stoku
+### Winter
+- Skiing and snowboarding
+- Snowshoe hiking
+- Relax in the sauna after a day on the slopes
 
-### Lato
-- Górskie szlaki piesze
-- Wycieczki rowerowe
-- Spacery po okolicy
+### Summer
+- Mountain hiking trails
+- Cycling trips
+- Walks in the area
 
 ### Workation
-Nasz apartament to doskonałe miejsce do pracy zdalnej:
-- Stabilne WiFi
-- Cicha lokalizacja
-- Dwa ekspresy do kawy (przelewowy i Nespresso)
-- Taras z możliwością pracy na świeżym powietrzu
+Our apartment is an excellent place for remote work:
+- Stable WiFi
+- Quiet location
+- Two coffee makers (drip and Nespresso)
+- Terrace with the option to work outdoors
 
 ---
 
-## Zarezerwuj już dziś!
+## Book Today!
 
 <form id="booking-form" class="booking-form">
   <div class="form-row">
     <div class="form-group">
-      <label for="start-date">Data przyjazdu * <small>(dd.mm.rrrr)</small></label>
-      <input type="date" id="start-date" name="start-date" required title="Wybierz datę przyjazdu">
+      <label for="start-date">Check-in date * <small>(dd/mm/yyyy)</small></label>
+      <input type="date" id="start-date" name="start-date" required title="Select check-in date">
     </div>
 
     <div class="form-group">
-      <label for="end-date">Data wyjazdu * <small>(dd.mm.rrrr)</small></label>
-      <input type="date" id="end-date" name="end-date" required title="Wybierz datę wyjazdu">
+      <label for="end-date">Check-out date * <small>(dd/mm/yyyy)</small></label>
+      <input type="date" id="end-date" name="end-date" required title="Select check-out date">
     </div>
   </div>
 
   <div class="form-group">
-    <label for="adults">Liczba dorosłych *</label>
-    <input type="number" id="adults" name="adults" min="1" max="4" value="2" required title="Podaj liczbę osób dorosłych (1-4)">
+    <label for="adults">Number of adults *</label>
+    <input type="number" id="adults" name="adults" min="1" max="4" value="2" required title="Enter number of adults (1-4)">
   </div>
 
   <div class="form-group">
-    <label for="kids-count">Liczba dzieci (0-17 lat)</label>
-    <input type="number" id="kids-count" name="kids-count" min="0" max="3" value="0" title="Podaj liczbę dzieci (0-3)">
+    <label for="kids-count">Number of children (0-17 years)</label>
+    <input type="number" id="kids-count" name="kids-count" min="0" max="3" value="0" title="Enter number of children (0-3)">
   </div>
 
   <div id="kids-ages-container" style="display: none;">
-    <label>Wiek dzieci:</label>
+    <label>Children's ages:</label>
     <div id="kids-ages"></div>
   </div>
 
-  <button type="submit" class="btn-primary">Sprawdź dostępność i ceny</button>
-  <p class="form-note">Zostaniesz przekierowany do systemu rezerwacji Sunandsnow.pl</p>
+  <button type="submit" class="btn-primary">Check Availability and Prices</button>
+  <p class="form-note">You will be redirected to the Sunandsnow.pl booking system</p>
 </form>
 
 <script>
@@ -588,8 +588,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const ageInput = document.createElement('div');
         ageInput.className = 'kid-age-input';
         ageInput.innerHTML = `
-          <label for="kid-age-${i}">Wiek dziecka ${i + 1} *</label>
-          <input type="number" id="kid-age-${i}" name="kid-age-${i}" min="0" max="17" required title="Podaj wiek dziecka (0-17 lat)">
+          <label for="kid-age-${i}">Child ${i + 1} age *</label>
+          <input type="number" id="kid-age-${i}" name="kid-age-${i}" min="0" max="17" required title="Enter child's age (0-17 years)">
         `;
         kidsAgesDiv.appendChild(ageInput);
       }
@@ -610,12 +610,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Validate dates
     if (!startDate || !endDate) {
-      alert('Proszę wybrać daty przyjazdu i wyjazdu.');
+      alert('Please select check-in and check-out dates.');
       return;
     }
 
     if (new Date(endDate) <= new Date(startDate)) {
-      alert('Data wyjazdu musi być późniejsza niż data przyjazdu.');
+      alert('Check-out date must be after check-in date.');
       return;
     }
 
@@ -627,7 +627,7 @@ document.addEventListener('DOMContentLoaded', function() {
       for (let i = 0; i < numKids; i++) {
         const ageInput = document.getElementById(`kid-age-${i}`);
         if (!ageInput || !ageInput.value) {
-          alert(`Proszę podać wiek dziecka ${i + 1}.`);
+          alert(`Please enter the age of child ${i + 1}.`);
           return;
         }
         const age = parseInt(ageInput.value);
@@ -638,7 +638,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Build the final URL
-    const baseUrl = 'https://www.sunandsnow.pl/search/apartment/7620/803';
+    const baseUrl = 'https://www.sunandsnow.pl/en/search/apartment/7620/803';
     const finalUrl = `${baseUrl}/${startDate}/${endDate}/${peopleString}?`;
 
     // Track booking form submission with PostHog
@@ -654,7 +654,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (window.posthog) {
       posthog.capture('booking_form_submitted', {
-        page: 'home',
+        page: 'home_en',
         start_date: startDate,
         end_date: endDate,
         adults: adults,
@@ -794,7 +794,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ---
 
-### Lub skontaktuj się bezpośrednio
+### Or Contact Us Directly
 
-Telefon: **+48 22 450 26 26**
-Email: **rezerwacja@sunandsnow.pl**
+**Phone:** +48 22 450 26 26
+**Email:** rezerwacja@sunandsnow.pl

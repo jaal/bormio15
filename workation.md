@@ -2,6 +2,8 @@
 layout: page
 title: Workation
 permalink: /workation/
+lang: pl
+slug: workation
 ---
 
 ## Workation w Czarnej Górze

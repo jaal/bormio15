@@ -2,6 +2,8 @@
 layout: page
 title: Czarna Góra
 permalink: /czarna-gora/
+lang: pl
+slug: czarna-gora
 ---
 
 <style>
