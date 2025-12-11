@@ -1,0 +1,220 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% assign current_slug = page.slug | default: page.path | replace: '.md', '' %}
+
+<div class="language-switcher">
+  <div class="language-switcher-toggle">
+    <button id="lang-toggle" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+      <svg class="language-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+      <span class="current-lang">{{ site.data.translations[current_lang].language_code | upcase }}</span>
+      <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <div class="language-switcher-dropdown" id="lang-dropdown" role="menu">
+    {% for lang in site.languages %}
+      {% assign lang_data = site.data.translations[lang] %}
+      {% if lang == current_lang %}
+        <a href="#" class="language-option active" role="menuitem" aria-current="page">
+          <span class="lang-code">{{ lang_data.language_code | upcase }}</span>
+          <span class="lang-name">{{ lang_data.language_name }}</span>
+          <svg class="checkmark" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </a>
+      {% else %}
+        {% if page.slug %}
+          {% assign alt_page = site.pages | where: "slug", page.slug | where: "lang", lang | first %}
+          {% if alt_page %}
+            <a href="{{ alt_page.url | relative_url }}" class="language-option" role="menuitem">
+              <span class="lang-code">{{ lang_data.language_code | upcase }}</span>
+              <span class="lang-name">{{ lang_data.language_name }}</span>
+            </a>
+          {% else %}
+            <a href="/{{ lang }}/" class="language-option" role="menuitem">
+              <span class="lang-code">{{ lang_data.language_code | upcase }}</span>
+              <span class="lang-name">{{ lang_data.language_name }}</span>
+            </a>
+          {% endif %}
+        {% else %}
+          <a href="/{{ lang }}/" class="language-option" role="menuitem">
+            <span class="lang-code">{{ lang_data.language_code | upcase }}</span>
+            <span class="lang-name">{{ lang_data.language_name }}</span>
+          </a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.language-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.language-switcher-toggle button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.language-switcher-toggle button:hover {
+  background: #e8e8e8;
+  border-color: #ccc;
+}
+
+.language-switcher-toggle button:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.language-icon {
+  flex-shrink: 0;
+}
+
+.current-lang {
+  font-weight: 600;
+  min-width: 20px;
+}
+
+.chevron {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.language-switcher-toggle button[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+.language-switcher-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.language-switcher-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.language-option:last-child {
+  border-bottom: none;
+}
+
+.language-option:hover {
+  background: #f5f5f5;
+}
+
+.language-option:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.language-option:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.language-option.active {
+  background: #e6f2ff;
+  color: #0066cc;
+  font-weight: 500;
+}
+
+.lang-code {
+  font-weight: 600;
+  font-size: 13px;
+  min-width: 24px;
+}
+
+.lang-name {
+  flex: 1;
+  font-size: 14px;
+}
+
+.checkmark {
+  color: #0066cc;
+  flex-shrink: 0;
+}
+
+.language-option:not(.active) .checkmark {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .language-switcher-dropdown {
+    right: auto;
+    left: 0;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.getElementById('lang-toggle');
+  const dropdown = document.getElementById('lang-dropdown');
+
+  if (toggle && dropdown) {
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !isExpanded);
+      dropdown.classList.toggle('active');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.language-switcher')) {
+        toggle.setAttribute('aria-expanded', 'false');
+        dropdown.classList.remove('active');
+      }
+    });
+
+    // Close dropdown on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && dropdown.classList.contains('active')) {
+        toggle.setAttribute('aria-expanded', 'false');
+        dropdown.classList.remove('active');
+        toggle.focus();
+      }
+    });
+  }
+});
+</script>
