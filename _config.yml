@@ -76,7 +76,7 @@ exclude:
   - /example # ignore Basically Basic dev site
 
 # Languages configuration
-languages: ["pl", "en"]
+languages: ["pl", "en", "de"]
 default_lang: "pl"
 exclude_from_localization: ["assets", "css", "js", "images"]
 
