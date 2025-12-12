@@ -2,8 +2,10 @@
 
 {% if post.read_time %}
   {% assign words = post.content | strip_html | number_of_words %}
-{% elsif page.read_time %}
-  {% assign words = page.content | strip_html | number_of_words %}
+{% else %}
+  {% if page.read_time %}
+    {% assign words = page.content | strip_html | number_of_words %}
+  {% endif %}
 {% endif %}
 
 {% if words < words_per_minute %}
