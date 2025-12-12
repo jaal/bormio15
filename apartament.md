@@ -489,27 +489,29 @@ function handleSwipe() {
 }
 </script>
 
-Zapraszamy do komfortowego apartamentu w sercu Czarnej Góry, idealnego dla rodzin i grup przyjaciół pragnących aktywnie spędzić czas w górach.
+Zapraszamy do komfortowego **Apartamentu 15 Premium** w sercu Czarnej Góry, idealnego dla rodzin i grup przyjaciół pragnących aktywnie spędzić czas w górach.
 
 ## Szczegóły apartamentu
 
 ### Rozmiar i lokalizacja
 - **Powierzchnia:** 40 m²
-- **Piętro:** Pierwsze piętro
+- **Piętro:** Parter (ground floor)
 - **Dostęp:** Winda w budynku
-- **Odległość od wyciągu:** 150 metrów
+- **Lokalizacja:** Aparthotel Panorama - budynek boczny
+- **Adres:** ul. Biała Woda, ul. Na Skarpie 4
 
 ### Pomieszczenia
 
 #### Sypialnia
 - Dwa wygodne łóżka pojedyncze
+- Jedno wygodne łóżko podwójne
 - Szafa na ubrania
 - Spokojne wnętrze zapewniające komfortowy sen
 
 #### Salon
-- Rozkładana sofa (dodatkowe miejsce do spania dla 2 osób)
+- Rozkładana sofa 2-osobowa (dodatkowe miejsce do spania)
 - Telewizor
-- Balkon z widokiem na góry
+- Balkon/taras z meblami ogrodowymi
 - Stół w salonie
 
 #### Kuchnia
@@ -517,9 +519,11 @@ W pełni wyposażona kuchnia zawiera:
 - Lodówkę z zamrażalnikiem
 - Kuchenkę elektryczną z piekarnikiem
 - Zmywarkę
+- Kuchenkę mikrofalową
 - Czajnik elektryczny
 - Ekspres do kawy przelewowy
 - Ekspres Nespresso
+- Toster
 - Komplet naczyń i sztućców
 - Podstawowe przybory kuchenne
 - Stół jadalny
@@ -528,7 +532,8 @@ W pełni wyposażona kuchnia zawiera:
 - Prysznic
 - WC
 - Umywalka
-- Ręczniki i podstawowe przybory toaletowe
+- Ręczniki
+- Suszarka do włosów
 
 ## Wyposażenie i udogodnienia
 
@@ -538,33 +543,38 @@ W pełni wyposażona kuchnia zawiera:
 - **Sejf:** Dla Twoich cennych rzeczy
 
 ### Dodatkowe udogodnienia
-- Balkon z meblami ogrodowymi
-- Bezpłatny parking
+- Balkon/taras z meblami ogrodowymi
+- Parking na terenie obiektu (nie gwarantowany)
 - Winda w budynku
 - Żelazko i deska do prasowania
-- Suszarka do włosów
+- Suszarka do włosów w łazience
+- Suszarka do ubrań
 - Pralka w mieszkaniu
+- Pościel i ręczniki zapewnione
+- Self check-in (możliwość samodzielnego zameldowania)
 
 ## Zasady pobytu
 
 ### Pojemność
 - **Maksymalna liczba gości:** 4 osoby
-- 2 osoby w sypialni + 2 osoby na rozkładanej sofie
+- Konfiguracja łóżek: 2 pojedyncze + 1 podwójne + rozkładana sofa 2-osobowa
 
 ### Polityka
 - **Zakaz palenia** w apartamencie
-- **Zwierzęta:** Niestety, nie przyjmujemy zwierząt
+- **Zwierzęta:** Akceptowane
 - **Cisza nocna:** 22:00 - 7:00
 - **Meldunek:** od 16:00
 - **Wymeldowanie:** do 11:00
+- **Kaucja zwrotna:** 300 PLN
+- **Opłata klimatyczna:** 3,20 PLN/osobę/dobę
 
 ### Co znajduje się w pobliżu?
 
-- **200m:** Wyciąg narciarski
-- **100m:** Pizzeria, kawiarnia i sklep spożywczy
-- **100m:** Basen i sauna
-- **300m:** Restauracja górska z polską kuchnią
-- **Bezpłatny parking:** Przy budynku
+- **Wyciąg narciarski:** W pobliżu
+- **Pizzeria, kawiarnia i sklep spożywczy:** W okolicy
+- **Basen i sauna:** W pobliżu
+- **Restauracje górskie:** W okolicy
+- **Parking:** Na terenie obiektu (nie gwarantowany)
 
 ## Ceny i rezerwacja
 
