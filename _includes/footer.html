@@ -11,6 +11,13 @@
             Tel: <a href="tel:+48224502626">+48 22 450 26 26</a><br>
             Email: <a href="mailto:rezerwacja@sunandsnow.pl">rezerwacja@sunandsnow.pl</a>
           </p>
+        {% elsif current_lang == 'de' %}
+          <h3>Kontakt</h3>
+          <p>
+            <strong>Reservierungen:</strong><br>
+            Tel: <a href="tel:+48224502626">+48 22 450 26 26</a><br>
+            Email: <a href="mailto:rezerwacja@sunandsnow.pl">rezerwacja@sunandsnow.pl</a>
+          </p>
         {% else %}
           <h3>Kontakt</h3>
           <p>
@@ -33,6 +40,18 @@
           </p>
           <p>
             <a href="https://maps.app.goo.gl/HMwJWPDvitMMTkCE8" target="_blank">Directions Map</a>
+          </p>
+        {% elsif current_lang == 'de' %}
+          <h3>Standort</h3>
+          <p>
+            <strong>Wohnung Bormio 15</strong><br>
+            Na Skarpie 10/15<br>
+            57-512 Biała Woda<br>
+            Polen<br>
+            GPS: 50.2613466, 16.8115155
+          </p>
+          <p>
+            <a href="https://maps.app.goo.gl/HMwJWPDvitMMTkCE8" target="_blank">Wegbeschreibung</a>
           </p>
         {% else %}
           <h3>Lokalizacja</h3>
@@ -57,6 +76,14 @@
             <a href="/en/faq/">FAQ - Frequently Asked Questions</a><br>
             <a href="/polityka-prywatnosci">Privacy Policy</a><br>
             <a href="/polityka-cookies">Cookie Policy</a>
+          </p>
+        {% elsif current_lang == 'de' %}
+          <h3>Informationen</h3>
+          <p>
+            <a href="/de/contact/">Kontakt und Buchung</a><br>
+            <a href="/de/faq/">FAQ - Häufig gestellte Fragen</a><br>
+            <a href="/polityka-prywatnosci">Datenschutzrichtlinie</a><br>
+            <a href="/polityka-cookies">Cookie-Richtlinie</a>
           </p>
         {% else %}
           <h3>Informacje</h3>

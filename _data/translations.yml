@@ -23,3 +23,16 @@ en:
     workation: "Workation"
     faq: "FAQ"
     contact: "Contact"
+
+de:
+  site_title: "Wohnung Bormio 15 - Czarna Góra"
+  language_name: "Deutsch"
+  language_code: "de"
+  nav:
+    home: "Startseite"
+    apartment: "Wohnung"
+    czarna_gora: "Czarna Góra"
+    dolni_morava: "Dolní Morava"
+    workation: "Workation"
+    faq: "FAQ"
+    contact: "Kontakt"
