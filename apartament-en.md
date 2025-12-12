@@ -489,27 +489,29 @@ function handleSwipe() {
 }
 </script>
 
-Welcome to a comfortable apartment in the heart of Czarna Góra, ideal for families and groups of friends looking to actively spend time in the mountains.
+Welcome to the comfortable **Apartment 15 Premium** in the heart of Czarna Góra, ideal for families and groups of friends looking to actively spend time in the mountains.
 
 ## Apartment Details
 
 ### Size and Location
 - **Area:** 40 m²
-- **Floor:** First floor
+- **Floor:** Ground floor
 - **Access:** Elevator in the building
-- **Distance from ski lift:** 150 meters
+- **Location:** Aparthotel Panorama - side building
+- **Address:** ul. Biała Woda, ul. Na Skarpie 4
 
 ### Rooms
 
-####Bedroom
+#### Bedroom
 - Two comfortable single beds
+- One comfortable double bed
 - Wardrobe for clothes
 - Peaceful interior ensuring comfortable sleep
 
 #### Living Room
-- Sofa bed (additional sleeping space for 2 people)
+- 2-person sofa bed (additional sleeping space)
 - TV
-- Balcony with mountain views
+- Balcony/terrace with garden furniture
 - Dining table
 
 #### Kitchen
@@ -517,9 +519,11 @@ Fully equipped kitchen includes:
 - Refrigerator with freezer
 - Electric stove with oven
 - Dishwasher
+- Microwave
 - Electric kettle
 - Drip coffee maker
 - Nespresso machine
+- Toaster
 - Complete set of dishes and cutlery
 - Basic kitchen utensils
 - Dining table
@@ -528,7 +532,8 @@ Fully equipped kitchen includes:
 - Shower
 - Toilet
 - Sink
-- Towels and basic toiletries
+- Towels
+- Hair dryer
 
 ## Equipment and Amenities
 
@@ -538,33 +543,38 @@ Fully equipped kitchen includes:
 - **Safe:** For your valuables
 
 ### Additional Amenities
-- Balcony with garden furniture
-- Free parking
+- Balcony/terrace with garden furniture
+- Parking on premises (not guaranteed)
 - Elevator in the building
 - Iron and ironing board
-- Hair dryer
+- Hair dryer in bathroom
+- Clothes dryer
 - Washing machine in the apartment
+- Bedding and towels provided
+- Self check-in available
 
 ## Stay Rules
 
 ### Capacity
 - **Maximum number of guests:** 4 people
-- 2 people in bedroom + 2 people on sofa bed
+- Bed configuration: 2 single + 1 double + 2-person sofa bed
 
 ### Policy
 - **No smoking** in the apartment
-- **Pets:** Unfortunately, we do not accept pets
+- **Pets:** Accepted
 - **Quiet hours:** 10:00 PM - 7:00 AM
 - **Check-in:** from 4:00 PM
 - **Check-out:** until 11:00 AM
+- **Refundable deposit:** 300 PLN
+- **Resort fee:** 3.20 PLN/person/night
 
 ### What's Nearby?
 
-- **200m:** Ski lift
-- **100m:** Pizzeria, café, and grocery store
-- **100m:** Pool and sauna
-- **300m:** Mountain restaurant with Polish cuisine
-- **Free parking:** At the building
+- **Ski lift:** Nearby
+- **Pizzeria, café, and grocery store:** In the area
+- **Pool and sauna:** Nearby
+- **Mountain restaurants:** In the area
+- **Parking:** On premises (not guaranteed)
 
 ## Prices and Reservations
 
