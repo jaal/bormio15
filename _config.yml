@@ -65,6 +65,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - LANGUAGE_DESIGN.md
   - node_modules
   - Rakefile
   - README
