@@ -75,11 +75,13 @@ exclude:
   - /docs # ignore Basically Basic sample site
   - /example # ignore Basically Basic dev site
 
+# Permalink structure for blog posts
+permalink: /aktualnosci/:year-:month-:day-:title/
+
 # Languages configuration
 languages: ["pl", "en", "de"]
 default_lang: "pl"
 exclude_from_localization: ["assets", "css", "js", "images"]
-
 # Front Matter Defaults
 defaults:
   # _posts
