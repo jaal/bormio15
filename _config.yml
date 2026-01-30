@@ -75,6 +75,9 @@ exclude:
   - vendor/ruby/
   - /docs # ignore Basically Basic sample site
   - /example # ignore Basically Basic dev site
+  - /tmp # ignore temporary Jekyll files
+  - "*.code-workspace"
+  - dolnimorava_news_urls.txt
 
 # Permalink structure for blog posts
 permalink: /aktualnosci/:year-:month-:day-:title/

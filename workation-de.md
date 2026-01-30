@@ -129,7 +129,7 @@ Apartment angepasst für längere Aufenthalte:
 
 ### Kontakt
 
-[Online buchen](https://www.sunandsnow.pl/de/search/apartment/7620/803)
+[Online buchen](https://www.sunandsnow.pl/apartament-panorama-aparthotelpanoramaczarnagoraresortsunsnow-15premiumbudynekbocznybormio-7620)
 
 **Telefon:** +48 22 450 26 26
 **E-Mail:** rezerwacja@sunandsnow.pl

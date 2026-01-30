@@ -580,7 +580,7 @@ Fully equipped kitchen includes:
 
 To learn about current prices and make a reservation, please contact us:
 
-[Book Online](https://www.sunandsnow.pl/search/apartment/7620/803/2026-06-01/2026-06-07/2-2-11,1,11,1)
+[Book Online](https://www.sunandsnow.pl/apartament-panorama-aparthotelpanoramaczarnagoraresortsunsnow-15premiumbudynekbocznybormio-7620)
 
 **Phone:** +48 22 450 26 26
 **Email:** rezerwacja@sunandsnow.pl
