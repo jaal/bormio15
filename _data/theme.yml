@@ -54,6 +54,7 @@ navigation_pages:
   - czarna-gora.md
   - dolni-morava.md
   - workation.md
+  - wynajem-dlugoterminowy.md
   - faq.md
   - aktualnosci.md
   - kontakt.md
@@ -62,6 +63,7 @@ navigation_pages:
   - czarna-gora-en.md
   - dolni-morava-en.md
   - workation-en.md
+  - wynajem-dlugoterminowy-en.md
   - faq-en.md
   - kontakt-en.md
   - index-de.md
@@ -69,5 +71,6 @@ navigation_pages:
   - czarna-gora-de.md
   - dolni-morava-de.md
   - workation-de.md
+  - wynajem-dlugoterminowy-de.md
   - faq-de.md
   - kontakt-de.md

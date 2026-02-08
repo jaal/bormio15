@@ -8,6 +8,7 @@ pl:
     czarna_gora: "Czarna Góra"
     dolni_morava: "Dolní Morava"
     workation: "Workation"
+    long_term_rental: "Wynajem długoterminowy"
     faq: "FAQ"
     contact: "Kontakt"
 
@@ -21,6 +22,7 @@ en:
     czarna_gora: "Czarna Góra"
     dolni_morava: "Dolní Morava"
     workation: "Workation"
+    long_term_rental: "Long-term rental"
     faq: "FAQ"
     contact: "Contact"
 
@@ -34,5 +36,6 @@ de:
     czarna_gora: "Czarna Góra"
     dolni_morava: "Dolní Morava"
     workation: "Workation"
+    long_term_rental: "Langzeitmiete"
     faq: "FAQ"
     contact: "Kontakt"
