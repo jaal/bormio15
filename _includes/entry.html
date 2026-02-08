@@ -4,6 +4,18 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% comment %}Determine current language from page or post{% endcomment %}
+{% assign current_lang = page.lang | default: post.lang | default: site.default_lang | default: "pl" %}
+
+{% comment %}Select appropriate translation set{% endcomment %}
+{% if current_lang == "en" %}
+  {% assign t = site.data.theme.t_en %}
+{% elsif current_lang == "de" %}
+  {% assign t = site.data.theme.t_de %}
+{% else %}
+  {% assign t = site.data.theme.t %}
+{% endif %}
+
 <article class="entry">
   <header class="entry-header">
     <h3 class="entry-title">
@@ -17,17 +29,20 @@
   <footer class="entry-meta">
     <ul>
     {% if post.date %}
-      <li><span class="icon">{% include icon-calendar.svg %}</span><time class="entry-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></li>
+      <li><span class="icon">{% include icon-calendar.svg %}</span><time class="entry-time" datetime="{{ post.date | date_to_xmlschema }}">{% include date-localized.html date=post.date lang=current_lang %}</time></li>
     {% endif %}
     {% if post.read_time %}
       <li><span class="icon">{% include icon-stopwatch.svg %}</span>{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</li>
+    {% endif %}
+    {% if post.author or site.author.name %}
+      <li>{{ t.by | default: 'by' }} {{ post.author | default: site.author.name }}</li>
     {% endif %}
     </ul>
   </footer>
   <div class="entry-excerpt">
     {% if post.excerpt %}
       {{ post.excerpt | markdownify }}
-      <p><a href="{{ post.url | relative_url }}" class="more-link">{{ site.data.theme.t.read_more | default: 'Read More' }} <span class="icon icon--arrow-right">{% include icon-arrow-right.svg %}</span></a></p>
+      <p><a href="{{ post.url | relative_url }}" class="more-link">{{ t.read_more | default: 'Read More' }} <span class="icon icon--arrow-right">{% include icon-arrow-right.svg %}</span></a></p>
     {% endif %}
   </div>
 </article>

@@ -1,0 +1,20 @@
+{% comment %}
+  Localized date formatter
+  Usage: {% include date-localized.html date=post.date lang=current_lang %}
+{% endcomment %}
+
+{% assign month_num = include.date | date: "%-m" | plus: 0 %}
+{% assign day = include.date | date: "%-d" %}
+{% assign year = include.date | date: "%Y" %}
+
+{% comment %}Month names in different languages{% endcomment %}
+{% if include.lang == "pl" %}
+  {% assign months = "stycznia,lutego,marca,kwietnia,maja,czerwca,lipca,sierpnia,września,października,listopada,grudnia" | split: "," %}
+  {{ day }} {{ months[month_num | minus: 1] }} {{ year }}
+{% elsif include.lang == "de" %}
+  {% assign months = "Januar,Februar,März,April,Mai,Juni,Juli,August,September,Oktober,November,Dezember" | split: "," %}
+  {{ day }}. {{ months[month_num | minus: 1] }} {{ year }}
+{% else %}
+  {% comment %}English - use default Jekyll formatting{% endcomment %}
+  {{ include.date | date: "%B %-d, %Y" }}
+{% endif %}

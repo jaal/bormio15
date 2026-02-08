@@ -8,8 +8,20 @@
   {% endif %}
 {% endif %}
 
-{% if words < words_per_minute %}
-  ~1 {{ site.data.theme.t.min_read | default: 'min read' }}
+{% comment %}Determine current language from page or post{% endcomment %}
+{% assign current_lang = page.lang | default: post.lang | default: site.default_lang | default: "pl" %}
+
+{% comment %}Select appropriate translation set{% endcomment %}
+{% if current_lang == "en" %}
+  {% assign t = site.data.theme.t_en %}
+{% elsif current_lang == "de" %}
+  {% assign t = site.data.theme.t_de %}
 {% else %}
-  {{ words | divided_by:words_per_minute }} {{ site.data.theme.t.min_read | default: 'min read' }}
+  {% assign t = site.data.theme.t %}
+{% endif %}
+
+{% if words < words_per_minute %}
+  ~1 {{ t.min_read | default: 'min read' }}
+{% else %}
+  {{ words | divided_by:words_per_minute }} {{ t.min_read | default: 'min read' }}
 {% endif %}
