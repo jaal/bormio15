@@ -134,8 +134,8 @@ navigation_pages:
   - dolni-morava.md
   - workation.md
   - wynajem-dlugoterminowy.md
-  - faq.md
   - aktualnosci.md
+  - faq.md
   - kontakt.md
   - index-en.md
   - apartament-en.md
@@ -143,6 +143,7 @@ navigation_pages:
   - dolni-morava-en.md
   - workation-en.md
   - wynajem-dlugoterminowy-en.md
+  - aktualnosci-en.md
   - faq-en.md
   - kontakt-en.md
   - index-de.md
@@ -151,5 +152,6 @@ navigation_pages:
   - dolni-morava-de.md
   - workation-de.md
   - wynajem-dlugoterminowy-de.md
+  - aktualnosci-de.md
   - faq-de.md
   - kontakt-de.md

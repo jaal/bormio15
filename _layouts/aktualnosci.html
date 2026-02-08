@@ -2,6 +2,18 @@
 layout: page
 ---
 
+{% comment %}Determine current language from page{% endcomment %}
+{% assign current_lang = page.lang | default: site.default_lang | default: "pl" %}
+
+{% comment %}Set load more button text based on language{% endcomment %}
+{% if current_lang == "en" %}
+  {% assign load_more_text = "Load More" %}
+{% elsif current_lang == "de" %}
+  {% assign load_more_text = "Mehr laden" %}
+{% else %}
+  {% assign load_more_text = "Więcej" %}
+{% endif %}
+
 {{ content }}
 
 <div class="entries-list" id="posts-container">
@@ -15,7 +27,7 @@ layout: page
 
 <div id="load-more-container" style="text-align: center; margin: 2rem 0;">
   <button id="load-more-btn" class="btn" style="display: none; padding: 0.75rem 2rem; font-size: 1rem; cursor: pointer; background-color: #0066cc; color: white; border: none; border-radius: 4px;">
-    Więcej
+    {{ load_more_text }}
   </button>
 </div>
 

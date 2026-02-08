@@ -9,6 +9,7 @@ pl:
     dolni_morava: "Dolní Morava"
     workation: "Workation"
     long_term_rental: "Wynajem długoterminowy"
+    news: "Aktualności"
     faq: "FAQ"
     contact: "Kontakt"
 
@@ -23,6 +24,7 @@ en:
     dolni_morava: "Dolní Morava"
     workation: "Workation"
     long_term_rental: "Long-term rental"
+    news: "News"
     faq: "FAQ"
     contact: "Contact"
 
@@ -37,5 +39,6 @@ de:
     dolni_morava: "Dolní Morava"
     workation: "Workation"
     long_term_rental: "Langzeitmiete"
+    news: "Aktuelles"
     faq: "FAQ"
     contact: "Kontakt"

@@ -6,6 +6,18 @@
     </div>
   {% endif %}
 
+  {% comment %}Determine current language from page{% endcomment %}
+  {% assign current_lang = page.lang | default: site.default_lang | default: "pl" %}
+
+  {% comment %}Select appropriate translation set{% endcomment %}
+  {% if current_lang == "en" %}
+    {% assign t = site.data.theme.t_en %}
+  {% elsif current_lang == "de" %}
+    {% assign t = site.data.theme.t_de %}
+  {% else %}
+    {% assign t = site.data.theme.t %}
+  {% endif %}
+
   <div class="inner">
     <div class="intro-text">
       <h1 id="page-title" class="intro-title">{{ page.alt_title | default: page.title | default: site.title | markdownify | strip_html }}</h1>
@@ -16,7 +28,7 @@
       {% if page.date %}
         {% include author %}
         <p class="entry-meta">
-          {% if author_name %}<span class="byline-item">{{ author_name | prepend: 'by ' }}</span>{% endif %}<span class="byline-item"><span class="icon">{% include icon-calendar.svg %}</span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></span>{% if page.read_time %} <span class="byline-item"><span class="icon">{% include icon-stopwatch.svg %}</span>{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>{% endif %}
+          {% if author_name %}<span class="byline-item">{{ t.by | default: 'by' }} {{ author_name }}</span>{% endif %}<span class="byline-item"><span class="icon">{% include icon-calendar.svg %}</span><time datetime="{{ page.date | date_to_xmlschema }}">{% include date-localized.html date=page.date lang=current_lang %}</time></span>{% if page.read_time %} <span class="byline-item"><span class="icon">{% include icon-stopwatch.svg %}</span>{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>{% endif %}
         </p>
       {% endif %}
 
