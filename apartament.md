@@ -570,8 +570,9 @@ W pełni wyposażona kuchnia zawiera:
 
 ### Co znajduje się w pobliżu?
 
+- **Kawiarnia Peak Mountain Cafe:** W budynku (parter)
 - **Wyciąg narciarski:** W pobliżu
-- **Pizzeria, kawiarnia i sklep spożywczy:** W okolicy
+- **Sklep spożywczy:** W okolicy
 - **Basen i sauna:** W pobliżu
 - **Restauracje górskie:** W okolicy
 - **Parking:** Na terenie obiektu (nie gwarantowany)

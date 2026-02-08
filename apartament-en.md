@@ -570,8 +570,9 @@ Fully equipped kitchen includes:
 
 ### What's Nearby?
 
+- **Peak Mountain Cafe:** In the building (ground floor)
 - **Ski lift:** Nearby
-- **Pizzeria, café, and grocery store:** In the area
+- **Grocery store:** In the area
 - **Pool and sauna:** Nearby
 - **Mountain restaurants:** In the area
 - **Parking:** On premises (not guaranteed)

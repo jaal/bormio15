@@ -570,8 +570,9 @@ Die voll ausgestattete Küche umfasst:
 
 ### Was gibt es in der Nähe?
 
+- **Peak Mountain Cafe:** Im Gebäude (Erdgeschoss)
 - **Skilift:** In der Nähe
-- **Pizzeria, Café und Lebensmittelgeschäft:** In der Umgebung
+- **Lebensmittelgeschäft:** In der Umgebung
 - **Pool und Sauna:** In der Nähe
 - **Bergrestaurants:** In der Umgebung
 - **Parkplatz:** Auf dem Gelände (nicht garantiert)
