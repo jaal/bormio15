@@ -3,43 +3,37 @@
   Usage: {% include date-localized.html date=post.date lang=current_lang %}
 {% endcomment %}
 
-{% assign month_num = include.date | date: "%-m" %}
-{% assign day = include.date | date: "%-d" %}
-{% assign year = include.date | date: "%Y" %}
+{% assign lang = include.lang | default: "pl" %}
 
-{% comment %}Month names in different languages{% endcomment %}
-{% if include.lang == "pl" %}
-  {% case month_num %}
-    {% when "1" %}{% assign month_name = "stycznia" %}
-    {% when "2" %}{% assign month_name = "lutego" %}
-    {% when "3" %}{% assign month_name = "marca" %}
-    {% when "4" %}{% assign month_name = "kwietnia" %}
-    {% when "5" %}{% assign month_name = "maja" %}
-    {% when "6" %}{% assign month_name = "czerwca" %}
-    {% when "7" %}{% assign month_name = "lipca" %}
-    {% when "8" %}{% assign month_name = "sierpnia" %}
-    {% when "9" %}{% assign month_name = "września" %}
-    {% when "10" %}{% assign month_name = "października" %}
-    {% when "11" %}{% assign month_name = "listopada" %}
-    {% when "12" %}{% assign month_name = "grudnia" %}
-  {% endcase %}
-  {{ day }} {{ month_name }} {{ year }}
-{% elsif include.lang == "de" %}
-  {% case month_num %}
-    {% when "1" %}{% assign month_name = "Januar" %}
-    {% when "2" %}{% assign month_name = "Februar" %}
-    {% when "3" %}{% assign month_name = "März" %}
-    {% when "4" %}{% assign month_name = "April" %}
-    {% when "5" %}{% assign month_name = "Mai" %}
-    {% when "6" %}{% assign month_name = "Juni" %}
-    {% when "7" %}{% assign month_name = "Juli" %}
-    {% when "8" %}{% assign month_name = "August" %}
-    {% when "9" %}{% assign month_name = "September" %}
-    {% when "10" %}{% assign month_name = "Oktober" %}
-    {% when "11" %}{% assign month_name = "November" %}
-    {% when "12" %}{% assign month_name = "Dezember" %}
-  {% endcase %}
-  {{ day }}. {{ month_name }} {{ year }}
+{% comment %}Polish genitive month names{% endcomment %}
+{% if lang == "pl" %}
+  {% assign m = include.date | date: "%-m" %}
+  {% if m == "1" %}{{ include.date | date: "%-d" }} stycznia {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "2" %}{{ include.date | date: "%-d" }} lutego {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "3" %}{{ include.date | date: "%-d" }} marca {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "4" %}{{ include.date | date: "%-d" }} kwietnia {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "5" %}{{ include.date | date: "%-d" }} maja {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "6" %}{{ include.date | date: "%-d" }} czerwca {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "7" %}{{ include.date | date: "%-d" }} lipca {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "8" %}{{ include.date | date: "%-d" }} sierpnia {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "9" %}{{ include.date | date: "%-d" }} września {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "10" %}{{ include.date | date: "%-d" }} października {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "11" %}{{ include.date | date: "%-d" }} listopada {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "12" %}{{ include.date | date: "%-d" }} grudnia {{ include.date | date: "%Y" }}{% endif %}
+{% elsif lang == "de" %}
+  {% assign m = include.date | date: "%-m" %}
+  {% if m == "1" %}{{ include.date | date: "%-d" }}. Januar {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "2" %}{{ include.date | date: "%-d" }}. Februar {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "3" %}{{ include.date | date: "%-d" }}. März {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "4" %}{{ include.date | date: "%-d" }}. April {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "5" %}{{ include.date | date: "%-d" }}. Mai {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "6" %}{{ include.date | date: "%-d" }}. Juni {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "7" %}{{ include.date | date: "%-d" }}. Juli {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "8" %}{{ include.date | date: "%-d" }}. August {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "9" %}{{ include.date | date: "%-d" }}. September {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "10" %}{{ include.date | date: "%-d" }}. Oktober {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "11" %}{{ include.date | date: "%-d" }}. November {{ include.date | date: "%Y" }}{% endif %}
+  {% if m == "12" %}{{ include.date | date: "%-d" }}. Dezember {{ include.date | date: "%Y" }}{% endif %}
 {% else %}
   {% comment %}English - use default Jekyll formatting{% endcomment %}
   {{ include.date | date: "%B %-d, %Y" }}
