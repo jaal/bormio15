@@ -1,0 +1,93 @@
+<script>
+(function () {
+  function ph() {
+    return window.posthog && window.posthog.__loaded ? window.posthog : null;
+  }
+  function capture(event, props) {
+    var p = ph();
+    if (!p) return;
+    try { p.capture(event, props || {}); } catch (e) {}
+  }
+
+  // ---- 1. Kliki w booking (sunandsnow.pl) ----
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="sunandsnow.pl"]');
+    if (!a) return;
+    capture('click_book_external', {
+      href: a.href,
+      link_text: (a.innerText || '').trim().slice(0, 80),
+      page: location.pathname,
+      cta_location: a.closest('header,footer,main,nav,section') ? a.closest('header,footer,main,nav,section').tagName.toLowerCase() : 'other'
+    });
+  });
+
+  // ---- 2. Kliki w telefon ----
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="tel:"]');
+    if (!a) return;
+    capture('click_phone', {
+      number: a.href.replace('tel:', ''),
+      page: location.pathname
+    });
+  });
+
+  // ---- 3. Kliki w e-mail (Cloudflare email-protection lub mailto:) ----
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="mailto:"], a[href*="email-protection"]');
+    if (!a) return;
+    capture('click_email', { page: location.pathname });
+  });
+
+  // ---- 4. Mapa dojazdu (Google Maps) ----
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="maps.app.goo.gl"], a[href*="google.com/maps"]');
+    if (!a) return;
+    capture('click_directions', { page: location.pathname });
+  });
+
+  // ---- 5. Otwarcie galerii (klik w slider/zdjęcie) ----
+  document.addEventListener('click', function (e) {
+    var img = e.target.closest('.gallery img, [class*="gallery"] img, .slick img, .swiper img');
+    if (!img) return;
+    capture('gallery_image_click', {
+      src: img.getAttribute('src'),
+      page: location.pathname
+    });
+  });
+
+  // ---- 6. Scroll milestones (25/50/75/100, raz per pageview) ----
+  var marks = { 25: false, 50: false, 75: false, 100: false };
+  var ticking = false;
+  function checkScroll() {
+    var doc = document.documentElement;
+    var scrolled = (window.scrollY + window.innerHeight) / doc.scrollHeight * 100;
+    [25, 50, 75, 100].forEach(function (m) {
+      if (!marks[m] && scrolled >= m) {
+        marks[m] = true;
+        capture('scroll_depth', { percent: m, page: location.pathname });
+      }
+    });
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { requestAnimationFrame(checkScroll); ticking = true; }
+  }, { passive: true });
+
+  // ---- 7. Time on page (engaged: >30s, deep: >2min) ----
+  var t0 = Date.now();
+  var fired = { 30: false, 120: false };
+  setInterval(function () {
+    var s = (Date.now() - t0) / 1000;
+    if (!fired[30] && s >= 30) { fired[30] = true; capture('engaged_30s', { page: location.pathname }); }
+    if (!fired[120] && s >= 120) { fired[120] = true; capture('engaged_2min', { page: location.pathname }); }
+  }, 5000);
+
+  // ---- 8. UTM enrichment dla każdego eventu w sesji ----
+  var params = new URLSearchParams(location.search);
+  var utm = {};
+  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) {
+    if (params.get(k)) utm[k] = params.get(k);
+  });
+  if (Object.keys(utm).length) window.posthog.register(utm);
+})();
+</script>
